@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 460" font-family="Helvetica, Arial, sans-serif">
+  <style>
+    .title { font-size: 16px; font-weight: 700; fill: #14365c; }
+    .subtitle { font-size: 11px; fill: #5b6b80; }
+    .axis { stroke: #2c3e50; stroke-width: 1; }
+    .grid { stroke: #e3e8ef; stroke-width: 1; }
+    .tick { font-size: 10px; fill: #2c3e50; }
+    .axislbl { font-size: 11px; fill: #2c3e50; }
+    .series { fill: none; stroke: #14365c; stroke-width: 2.5; }
+    .base { stroke: #888; stroke-dasharray: 4 3; stroke-width: 1; }
+    .caption { font-size: 10px; fill: #5b6b80; }
+    .shade { fill: #b03030; fill-opacity: 0.08; }
+    .anno { font-size: 10px; fill: #b03030; }
+  </style>
+  <text class="title" x="40" y="26">Trinidad &amp; Tobago Real Effective Exchange Rate (REER), 2005 — 2026</text>
+  <text class="subtitle" x="40" y="44">Index, 2010 = 100. Higher = stronger TTD in real terms. Values above 100 with a flat nominal rate indicate cumulative real overvaluation.</text>
+
+  <!-- plot: x [80,780] for years 2005..2026 (21 yrs), y [70,380] for index 80..140 -->
+  <line class="axis" x1="80" y1="380" x2="780" y2="380"/>
+  <line class="axis" x1="80" y1="70" x2="80" y2="380"/>
+
+  <!-- shaded overvaluation band: index > 110 ~ y < 226.67 -->
+  <rect class="shade" x="80" y="70" width="700" height="155"/>
+  <text class="anno" x="86" y="86">Persistent real overvaluation zone</text>
+
+  <!-- y grid: 80,90,100,110,120,130,140 -->
+  <g>
+    <line class="grid" x1="80" y1="380" x2="780" y2="380"/>
+    <line class="grid" x1="80" y1="328" x2="780" y2="328"/>
+    <line class="base" x1="80" y1="277" x2="780" y2="277"/>
+    <line class="grid" x1="80" y1="225" x2="780" y2="225"/>
+    <line class="grid" x1="80" y1="173" x2="780" y2="173"/>
+    <line class="grid" x1="80" y1="122" x2="780" y2="122"/>
+    <line class="grid" x1="80" y1="70" x2="780" y2="70"/>
+    <text class="tick" x="72" y="383" text-anchor="end">80</text>
+    <text class="tick" x="72" y="331" text-anchor="end">90</text>
+    <text class="tick" x="72" y="280" text-anchor="end">100</text>
+    <text class="tick" x="72" y="228" text-anchor="end">110</text>
+    <text class="tick" x="72" y="176" text-anchor="end">120</text>
+    <text class="tick" x="72" y="125" text-anchor="end">130</text>
+    <text class="tick" x="72" y="73" text-anchor="end">140</text>
+  </g>
+
+  <!-- x ticks every ~5 yrs: 2005,2010,2015,2020,2025 -->
+  <g>
+    <text class="tick" x="80" y="396" text-anchor="middle">2005</text>
+    <text class="tick" x="246" y="396" text-anchor="middle">2010</text>
+    <text class="tick" x="413" y="396" text-anchor="middle">2015</text>
+    <text class="tick" x="580" y="396" text-anchor="middle">2020</text>
+    <text class="tick" x="746" y="396" text-anchor="middle">2025</text>
+  </g>
+  <text class="axislbl" x="430" y="418" text-anchor="middle">Year</text>
+  <text class="axislbl" x="20" y="225" text-anchor="middle" transform="rotate(-90 20 225)">REER index (2010=100)</text>
+
+  <!-- Data series 2005-2026 -->
+  <!-- y = 380 - (val-80)*5.1667 ; x = 80 + (year-2005)*33.333 -->
+  <!-- 2005 92, 2006 94, 2007 96, 2008 100, 2009 99, 2010 100, 2011 102, 2012 105,
+       2013 107, 2014 110, 2015 116, 2016 121, 2017 124, 2018 125, 2019 126, 2020 124,
+       2021 122, 2022 126, 2023 129, 2024 130, 2025 128, 2026 126 -->
+  <polyline class="series" points="
+    80,318
+    113,308
+    147,297
+    180,277
+    213,282
+    246,277
+    280,266
+    313,251
+    347,240
+    380,225
+    413,194
+    447,168
+    480,153
+    513,148
+    547,142
+    580,153
+    613,163
+    647,142
+    680,127
+    713,122
+    747,132
+    780,142
+  "/>
+
+  <text class="caption" x="40" y="442">Sources: World Bank WDI (PX.REX.REER); IMF International Financial Statistics; BIS effective exchange rate data. 2025–26 figures are illustrative based on inflation differentials.</text>
+</svg>

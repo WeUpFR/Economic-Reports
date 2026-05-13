@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 460" font-family="Helvetica, Arial, sans-serif">
+  <style>
+    .title { font-size: 16px; font-weight: 700; fill: #14365c; }
+    .subtitle { font-size: 11px; fill: #5b6b80; }
+    .axis { stroke: #2c3e50; stroke-width: 1; }
+    .grid { stroke: #e3e8ef; stroke-width: 1; }
+    .tick { font-size: 10px; fill: #2c3e50; }
+    .axislbl { font-size: 11px; fill: #2c3e50; }
+    .series { fill: none; stroke: #14365c; stroke-width: 2.5; }
+    .anno { font-size: 10px; fill: #b03030; }
+    .annoline { stroke: #b03030; stroke-width: 1; stroke-dasharray: 3 3; }
+    .caption { font-size: 10px; fill: #5b6b80; }
+  </style>
+  <text class="title" x="40" y="26">Nominal TTD per USD, 1976 — 2026</text>
+  <text class="subtitle" x="40" y="44">Official period-end rate. After 1993 the regime is a "managed float", but the rate has been effectively pinned near 6.78 since 2016.</text>
+
+  <!-- plot area: x [80,780], y [70,380] -->
+  <line class="axis" x1="80" y1="380" x2="780" y2="380"/>
+  <line class="axis" x1="80" y1="70" x2="80" y2="380"/>
+
+  <!-- y grid + ticks: 2.0 to 8.0 -->
+  <g>
+    <line class="grid" x1="80" y1="380" x2="780" y2="380"/>
+    <line class="grid" x1="80" y1="328" x2="780" y2="328"/>
+    <line class="grid" x1="80" y1="277" x2="780" y2="277"/>
+    <line class="grid" x1="80" y1="225" x2="780" y2="225"/>
+    <line class="grid" x1="80" y1="173" x2="780" y2="173"/>
+    <line class="grid" x1="80" y1="122" x2="780" y2="122"/>
+    <line class="grid" x1="80" y1="70" x2="780" y2="70"/>
+    <text class="tick" x="72" y="383" text-anchor="end">2.0</text>
+    <text class="tick" x="72" y="331" text-anchor="end">3.0</text>
+    <text class="tick" x="72" y="280" text-anchor="end">4.0</text>
+    <text class="tick" x="72" y="228" text-anchor="end">5.0</text>
+    <text class="tick" x="72" y="176" text-anchor="end">6.0</text>
+    <text class="tick" x="72" y="125" text-anchor="end">7.0</text>
+    <text class="tick" x="72" y="73" text-anchor="end">8.0</text>
+  </g>
+
+  <!-- x ticks 1976 .. 2026 every 10 yrs -->
+  <g>
+    <text class="tick" x="80" y="396" text-anchor="middle">1976</text>
+    <text class="tick" x="220" y="396" text-anchor="middle">1986</text>
+    <text class="tick" x="360" y="396" text-anchor="middle">1996</text>
+    <text class="tick" x="500" y="396" text-anchor="middle">2006</text>
+    <text class="tick" x="640" y="396" text-anchor="middle">2016</text>
+    <text class="tick" x="780" y="396" text-anchor="middle">2026</text>
+  </g>
+  <text class="axislbl" x="430" y="418" text-anchor="middle">Year</text>
+  <text class="axislbl" x="20" y="225" text-anchor="middle" transform="rotate(-90 20 225)">TTD per USD</text>
+
+  <!-- Series. y = 380 - (val-2)*51.667. x = 80 + (year-1976)*14 -->
+  <!-- Data points:
+       1976 2.40, 1980 2.40, 1985 2.40, 1986 3.60, 1988 4.25, 1993 5.83,
+       1995 5.95, 2000 6.30, 2005 6.30, 2010 6.36, 2015 6.36, 2020 6.75,
+       2024 6.78, 2026 6.78 -->
+  <polyline class="series" points="
+    80,359.33
+    136,359.33
+    206,359.33
+    220,297.33
+    248,243.42
+    318,182.08
+    346,176.0
+    416,157.0
+    486,157.0
+    556,153.9
+    626,153.9
+    696,128.75
+    752,127.2
+    780,127.2
+  "/>
+
+  <!-- annotations -->
+  <line class="annoline" x1="220" y1="297" x2="220" y2="60"/>
+  <text class="anno" x="224" y="62">1986–88: devaluations 2.40 → 4.25</text>
+
+  <line class="annoline" x1="318" y1="182" x2="318" y2="92"/>
+  <text class="anno" x="322" y="94">Apr 1993: managed float</text>
+
+  <line class="annoline" x1="696" y1="128" x2="696" y2="106"/>
+  <text class="anno" x="700" y="108">2016–present: pinned near 6.78</text>
+
+  <text class="caption" x="40" y="442">Sources: Central Bank of Trinidad and Tobago; IMF Article IV reports; CBTT Customs &amp; Excise historical reference rates.</text>
+</svg>
