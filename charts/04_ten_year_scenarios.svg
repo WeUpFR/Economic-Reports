@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" font-family="Helvetica, Arial, sans-serif">
+  <style>
+    .title { font-size: 16px; font-weight: 700; fill: #14365c; }
+    .subtitle { font-size: 11px; fill: #5b6b80; }
+    .axis { stroke: #2c3e50; stroke-width: 1; }
+    .grid { stroke: #e3e8ef; stroke-width: 1; }
+    .tick { font-size: 10px; fill: #2c3e50; }
+    .axislbl { font-size: 11px; fill: #2c3e50; }
+    .caption { font-size: 10px; fill: #5b6b80; }
+    .lbl { font-size: 11px; font-weight: 600; }
+    .s1 { fill: none; stroke: #2e7d32; stroke-width: 2.5; }
+    .s2 { fill: none; stroke: #14365c; stroke-width: 2.5; }
+    .s3 { fill: none; stroke: #c98a2b; stroke-width: 2.5; }
+    .s4 { fill: none; stroke: #b03030; stroke-width: 2.5; stroke-dasharray: 6 3; }
+    .legend { font-size: 11px; fill: #2c3e50; }
+  </style>
+  <text class="title" x="40" y="26">TTD/USD 10-year scenario projections, 2026 — 2036</text>
+  <text class="subtitle" x="40" y="44">Author scenarios. None are official forecasts. They illustrate where the rate could go under different policy paths.</text>
+
+  <!-- Plot area: x [80,760] for years 2026..2036 (10 yrs span = 680 px, 68/yr), y [70,380] for TTD 6 to 12 -->
+  <line class="axis" x1="80" y1="380" x2="760" y2="380"/>
+  <line class="axis" x1="80" y1="70" x2="80" y2="380"/>
+
+  <!-- y grid 6..12 -->
+  <g>
+    <line class="grid" x1="80" y1="380" x2="760" y2="380"/>
+    <line class="grid" x1="80" y1="328" x2="760" y2="328"/>
+    <line class="grid" x1="80" y1="277" x2="760" y2="277"/>
+    <line class="grid" x1="80" y1="225" x2="760" y2="225"/>
+    <line class="grid" x1="80" y1="173" x2="760" y2="173"/>
+    <line class="grid" x1="80" y1="122" x2="760" y2="122"/>
+    <line class="grid" x1="80" y1="70" x2="760" y2="70"/>
+    <text class="tick" x="72" y="383" text-anchor="end">6.0</text>
+    <text class="tick" x="72" y="331" text-anchor="end">7.0</text>
+    <text class="tick" x="72" y="280" text-anchor="end">8.0</text>
+    <text class="tick" x="72" y="228" text-anchor="end">9.0</text>
+    <text class="tick" x="72" y="176" text-anchor="end">10.0</text>
+    <text class="tick" x="72" y="125" text-anchor="end">11.0</text>
+    <text class="tick" x="72" y="73" text-anchor="end">12.0</text>
+  </g>
+
+  <!-- x ticks every 2 yrs -->
+  <g>
+    <text class="tick" x="80" y="396" text-anchor="middle">2026</text>
+    <text class="tick" x="216" y="396" text-anchor="middle">2028</text>
+    <text class="tick" x="352" y="396" text-anchor="middle">2030</text>
+    <text class="tick" x="488" y="396" text-anchor="middle">2032</text>
+    <text class="tick" x="624" y="396" text-anchor="middle">2034</text>
+    <text class="tick" x="760" y="396" text-anchor="middle">2036</text>
+  </g>
+  <text class="axislbl" x="420" y="418" text-anchor="middle">Year</text>
+  <text class="axislbl" x="20" y="225" text-anchor="middle" transform="rotate(-90 20 225)">TTD per USD</text>
+
+  <!-- Conversion: y = 380 - (val-6)*51.667 ; x = 80 + (year-2026)*68 -->
+  <!-- S1 "Status quo crawl": 6.78,6.80,6.85,6.90,6.95,7.00,7.05,7.10,7.15,7.20,7.25 -->
+  <polyline class="s1" points="
+    80,339.7
+    148,338.7
+    216,336.1
+    284,333.5
+    352,330.9
+    420,328.3
+    488,325.7
+    556,323.2
+    624,320.6
+    692,318.0
+    760,315.4
+  "/>
+
+  <!-- S2 "Gradual managed depreciation (IMF-aligned)": 6.78,6.95,7.20,7.45,7.65,7.85,8.00,8.10,8.20,8.30,8.40 -->
+  <polyline class="s2" points="
+    80,339.7
+    148,330.9
+    216,318.0
+    284,305.1
+    352,294.8
+    420,284.4
+    488,276.7
+    556,271.5
+    624,266.3
+    692,261.1
+    760,256.0
+  "/>
+
+  <!-- S3 "Step devaluation + crawl": 6.78,7.30,7.80(step in 2028),7.95,8.10,8.30,8.45,8.55,8.65,8.75,8.85 -->
+  <polyline class="s3" points="
+    80,339.7
+    148,313.0
+    216,286.7
+    284,278.9
+    352,271.1
+    420,260.8
+    488,253.0
+    556,247.9
+    624,242.7
+    692,237.5
+    760,232.3
+  "/>
+
+  <!-- S4 "Disorderly float / crisis": 6.78,7.20,9.40,10.0,10.2,10.3,10.4,10.5,10.55,10.6,10.65 -->
+  <polyline class="s4" points="
+    80,339.7
+    148,318.0
+    216,204.3
+    284,173.3
+    352,163.0
+    420,157.8
+    488,152.7
+    556,147.5
+    624,144.9
+    692,142.3
+    760,139.7
+  "/>
+
+  <!-- Legend -->
+  <g transform="translate(440,72)">
+    <rect x="0" y="0" width="320" height="100" fill="#ffffff" stroke="#cbd2db"/>
+    <line x1="10" y1="20" x2="40" y2="20" stroke="#2e7d32" stroke-width="2.5"/>
+    <text class="legend" x="46" y="24">Status quo crawl (≈7.25 by 2036)</text>
+    <line x1="10" y1="40" x2="40" y2="40" stroke="#14365c" stroke-width="2.5"/>
+    <text class="legend" x="46" y="44">Gradual depreciation (≈8.40 by 2036) — base case</text>
+    <line x1="10" y1="60" x2="40" y2="60" stroke="#c98a2b" stroke-width="2.5"/>
+    <text class="legend" x="46" y="64">Step devaluation 2028 (≈8.85 by 2036)</text>
+    <line x1="10" y1="80" x2="40" y2="80" stroke="#b03030" stroke-width="2.5" stroke-dasharray="6 3"/>
+    <text class="legend" x="46" y="84">Disorderly float / crisis (≈10.65 by 2036)</text>
+  </g>
+
+  <text class="caption" x="40" y="442">Scenario probabilities (author estimate): Status quo 20% · Gradual 45% · Step 25% · Crisis 10%. Probability-weighted 2036 rate ≈ TTD 8.45 / USD.</text>
+  <text class="caption" x="40" y="458">Assumes US inflation ~2.3%/yr, TT inflation ~1.5%/yr, oil ~$70–80/bbl, no major external shock. See report Section 5 for full mechanics.</text>
+</svg>

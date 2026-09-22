@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 460" font-family="Helvetica, Arial, sans-serif">
+  <style>
+    .title { font-size: 16px; font-weight: 700; fill: #14365c; }
+    .subtitle { font-size: 11px; fill: #5b6b80; }
+    .axis { stroke: #2c3e50; stroke-width: 1; }
+    .grid { stroke: #e3e8ef; stroke-width: 1; }
+    .tick { font-size: 10px; fill: #2c3e50; }
+    .axislbl { font-size: 11px; fill: #2c3e50; }
+    .lbl { font-size: 11px; fill: #14365c; }
+    .caption { font-size: 10px; fill: #5b6b80; }
+    .official { fill: #14365c; }
+    .imf { fill: #3a6ea5; }
+    .ppp { fill: #c98a2b; }
+    .parallel { fill: #b03030; }
+    .float { fill: #6c2a4f; }
+    .markerline { stroke: #14365c; stroke-width: 2; stroke-dasharray: 4 4; }
+    .valtxt { font-size: 10px; fill: #ffffff; font-weight: 700; }
+    .valtxt-dark { font-size: 10px; fill: #14365c; font-weight: 700; }
+  </style>
+  <text class="title" x="40" y="26">Estimates of the "fair value" TTD/USD exchange rate, May 2026</text>
+  <text class="subtitle" x="40" y="44">Different methodologies suggest the TTD is overvalued. Each bar shows the implied TTD/USD level for that approach. Higher = weaker TTD.</text>
+
+  <!-- plot: x from 6.0 to 11.0; mapped 100 .. 760. Each unit = 132 px. -->
+  <!-- y axis with 5 categories; bars 38 tall, gap 12 -->
+  <line class="axis" x1="100" y1="380" x2="760" y2="380"/>
+  <line class="axis" x1="100" y1="70" x2="100" y2="380"/>
+
+  <!-- x grid at integer TTD/USD levels 6,7,8,9,10,11 -->
+  <g>
+    <line class="grid" x1="100" y1="70" x2="100" y2="380"/>
+    <line class="grid" x1="232" y1="70" x2="232" y2="380"/>
+    <line class="grid" x1="364" y1="70" x2="364" y2="380"/>
+    <line class="grid" x1="496" y1="70" x2="496" y2="380"/>
+    <line class="grid" x1="628" y1="70" x2="628" y2="380"/>
+    <line class="grid" x1="760" y1="70" x2="760" y2="380"/>
+    <text class="tick" x="100" y="396" text-anchor="middle">6.0</text>
+    <text class="tick" x="232" y="396" text-anchor="middle">7.0</text>
+    <text class="tick" x="364" y="396" text-anchor="middle">8.0</text>
+    <text class="tick" x="496" y="396" text-anchor="middle">9.0</text>
+    <text class="tick" x="628" y="396" text-anchor="middle">10.0</text>
+    <text class="tick" x="760" y="396" text-anchor="middle">11.0</text>
+  </g>
+  <text class="axislbl" x="430" y="418" text-anchor="middle">TTD per USD (higher = weaker TTD)</text>
+
+  <!-- Official rate line marker at 6.78 -> x = 100 + 0.78*132 = 202.96 -->
+  <line class="markerline" x1="203" y1="70" x2="203" y2="380"/>
+  <text class="lbl" x="207" y="82">Official 6.78</text>
+
+  <!-- Bars. categories y centers: 90, 140, 195, 250, 320 -->
+  <!-- 1. IMF EBA-Lite (2024-25 vintage): ~1.9% overvalued -> 6.91. width = (6.91-6.0)*132 = 120 -->
+  <rect class="imf" x="100" y="92" width="120" height="34"/>
+  <text class="valtxt" x="115" y="113" >6.91</text>
+  <text class="lbl" x="230" y="113">IMF EBA-Lite (2024–25 vintage) ≈ 1.9% overvalued</text>
+
+  <!-- 2. Parallel / bank-cash market observed: 7.30 -> width = 1.30*132 = 172 -->
+  <rect class="parallel" x="100" y="138" width="172" height="34"/>
+  <text class="valtxt" x="115" y="159">7.30</text>
+  <text class="lbl" x="282" y="159">Parallel-market lower bound (commercial cash / cambios)</text>
+
+  <!-- 3. PPP / REER central (illustrative ~10-12% overvaluation): 7.50 -> width=1.50*132=198 -->
+  <rect class="ppp" x="100" y="184" width="198" height="34"/>
+  <text class="valtxt" x="115" y="205">7.50</text>
+  <text class="lbl" x="308" y="205">PPP-implied central estimate (REER-anchored, ~10–12% overvalued)</text>
+
+  <!-- 4. Parallel market upper / "downtown" cambio: 8.00 -> width = 2.00*132 = 264 -->
+  <rect class="parallel" x="100" y="230" width="264" height="34"/>
+  <text class="valtxt" x="115" y="251">8.00</text>
+  <text class="lbl" x="374" y="251">Parallel-market upper observation (downtown cambios)</text>
+
+  <!-- 5. IMF EBA-Lite 2022 vintage: 20.4% overvalued -> 8.16 -> width=2.16*132=285 -->
+  <rect class="imf" x="100" y="276" width="285" height="34"/>
+  <text class="valtxt" x="115" y="297">8.16</text>
+  <text class="lbl" x="395" y="297">IMF 2022 Article IV EBA-Lite (20.4% overvalued)</text>
+
+  <!-- 6. Crisis / free-float estimate: 9.50-10.50 mid 10.0 -> width=4.00*132=528 -->
+  <rect class="float" x="100" y="322" width="528" height="34"/>
+  <text class="valtxt" x="115" y="343">9.50 – 10.50</text>
+  <text class="lbl" x="638" y="343">Disorderly free-float scenario</text>
+
+  <text class="caption" x="40" y="442">Sources: IMF 2022 &amp; 2026 Article IV; Trinidad Express; The Value Critic (2025); CBTT data. PPP estimate is author-calculated from US–TT inflation differentials since 2010.</text>
+</svg>
