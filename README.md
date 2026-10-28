@@ -8,6 +8,6 @@ Research articles on Trinidad and Tobago and wider economic questions.
 | 22 September 2026 | **When stock markets stagnate:** emerging markets, Trinidad and Tobago, and the risk of institutional selling | [Article](Emerging_Markets_Trinidad_Stock_Market_Liquidity_2026-09-22.md) · [PDF](Emerging_Markets_Trinidad_Stock_Market_Liquidity_2026-09-22.pdf) |
 | April 2026 | Trinidad debt report | [PDF](Trinidad_Debt_Report_April_2026_redacted.pdf) |
 
-The October report reviews documented AI-enabled attacks from 2024 to 2026, the offensive capability of Chinese and other open-weight models, and Trinidad and Tobago's cyber incidents, regulation, law and shared payment infrastructure. It closes with a 13-domain readiness scorecard, likely attack routes and priority actions, drawing on 98 sources.
+The October report reviews documented AI-enabled attacks from 2024 to 2026, the offensive capability of Chinese and other open-weight models, and Trinidad and Tobago's cyber incidents, regulation, law and shared payment infrastructure. It closes with a 13-domain readiness scorecard, likely attack routes and priority actions, drawing on 102 sources. Every section was independently fact-checked against its cited sources before publication.
 
 The September report examines the relationship between stock prices and the economy, TTSE trading depth, institutional ownership, NIBTT cash needs and contribution reforms, possible buyers of institutional share sales, and conditional liquidity stress scenarios. It includes dated evidence, calculation methods and 18 sources.
