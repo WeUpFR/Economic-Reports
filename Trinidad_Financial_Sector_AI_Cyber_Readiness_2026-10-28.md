@@ -20,6 +20,21 @@ No Japanese bank's core systems were hacked in October 2026. The bank incidents 
 
 None of these has been linked to AI. Separately, in October Microsoft reported a China-aligned group using an AI agent framework that, in several cases, reached privileged access within three hours. In September, GreyNoise documented "hundreds of AI agents" compromising 440 servers at 395 organisations in 48 countries in about 45 hours.
 
+**Late October brought the first mass-exploitation wave of AI-found flaws, dubbed "Black October".** On 21 October, PHP, the software behind about 70% of websites, fixed two critical flaws that researchers had found with AI help. Within days attackers were using them, including against firewall management screens exposed to the internet.
+
+- New York's financial regulator told firms the next day to patch or take systems offline.
+- Some Japanese banks and a US credit union briefly took online banking down as a precaution.
+- CrowdStrike's chief executive predicted "a lot of breaches happening in the coming months from this".
+- Incident-response firms describe being stretched, although none has published backlog data.
+
+The same fortnight brought three more relevant incidents:
+
+- About US$2.2-2.7 million was taken from Polymarket users through a compromised third-party script.
+- The US Defense Department confirmed that one of its agencies took about nine months to notice unauthorised access to personnel records of about 3 million people.
+- Haiti's central bank barred financial institutions from paying cyber ransoms, while one Haitian bank's online banking stayed down after what it calls a "technical incident".
+
+Trinidad and Tobago's national response team warned about the PHP flaws on the day the fix was released. The Central Bank published nothing on them.
+
 **AI capability is accelerating, and agent "swarms" are real.** The length of task that frontier models can complete has been doubling roughly every four to five months, and freely downloadable models trail the frontier by four to seven months. Trackers differ on the pace: one cyber index has risen roughly in a straight line since early 2025, and evaluators stress that their trends are not forecasts. In June 2026 the heads of the Five Eyes cyber agencies warned: "The timeline is not years, it is months." Swarms are not unstoppable, however. In the largest documented case, the attackers had taken full control of the network at only 12 of the 395 organisations whose servers they compromised when last observed, and a web application firewall stopped them in at least one case.
 
 Trinidad and Tobago has already been hit repeatedly by conventional attackers:
@@ -57,6 +72,7 @@ On this report's scorecard, which mainly measures the framework around instituti
 | Has AI changed hacking? | Yes. Between 2024 and 2026 it moved from drafting phishing emails to running most steps of real intrusions. It mainly makes existing techniques faster and cheaper; it has not invented new types of attack. |
 | Do Chinese and open-weight models matter? | Yes, but not because they are the best. Most documented AI-assisted intrusions used closed US models. Open-weight models are good enough against weakly defended targets, cheap, and beyond the reach of any company's safety monitoring. |
 | What happened at the US election regulator and the Japanese banks? | The FEC shut its filing systems for about two days after an attempted breach; no data theft or AI use has been confirmed. Japanese banks lost customer email data through an email-delivery vendor, and a hosting service for currency traders was used for unauthorised trades and a large ransom demand. The common lesson is third-party and shared-service risk. |
+| What is "Black October"? | An AI-found flaw in PHP, which runs about 70% of websites, was fixed on 21 October and attacked within days. Regulators abroad told firms to patch or disconnect within a day. TT-CSIRT warned on the day; the Central Bank has said nothing publicly. Polymarket, the US Defense Department and a Haitian bank also reported incidents in October. |
 | Has an AI-enabled attack hit a T&T bank? | Not on public evidence. Locally, AI has so far appeared in deepfake investment scams. Losses have come from ransomware, impersonation and account takeover. |
 | Are the largest banks prepared? | Partly, against common attacks. The Canadian-owned banks publish the strongest login controls. SMS codes remain selectable at the largest bank, and none of the banks reviewed publicly describes confirmation-of-payee checks. Public evidence cannot show how well internal defences work. |
 | Is the wider system prepared? | No. The main gaps are law, the speed of supervision and national warnings, information sharing, incident and loss data, shared infrastructure, and the credit-union and securities periphery. |
@@ -179,6 +195,45 @@ Apart from one staff mailbox at Hachijuni Nagano Bank, taken over through phishi
 
 **Assessment:** two things are now documented. AI agents run real campaigns against many targets in parallel, at machine speed. And they are uneven: most attempts fail, ordinary hardening still helps, and humans still direct them. The most damaging incidents of the period came through vendors, stolen credentials, phishing and unpatched systems, with no reported AI. AI multiplies those routes. It has not replaced them.
 
+### Late October 2026: "Black October"
+
+*Added 29 October 2026. Events are recent, and some details may change.*
+
+On 21 October, the PHP project fixed two critical flaws (CVE-2026-109618 and CVE-2026-109619, nicknamed "PHP2Shell"). They can let an attacker run code on a web server without logging in. PHP runs about 70% of websites. Researchers at Calif, OpenAI and Wiz found the flaws with AI help, and Wiz says frontier AI models turned "a longstanding flaw into an exploit". PHP warned that "there are no complete mitigations, updating is the only safe choice". [165, 166]
+
+| Date | What happened |
+|---|---|
+| 21 Oct | Fixes released. CISA told organisations to patch immediately, starting with internet-facing systems. **TT-CSIRT issued its own advisory the same day** [165-167] |
+| 22 Oct | New York's financial regulator told every firm it supervises to patch immediately or "take affected systems and applications offline until they are appropriately secured" [168] |
+| 22 Oct | Some Japanese banks partly suspended online services as a precaution. A US credit union with about US$8.9 billion of assets took its website and digital banking offline for a day to patch. In the UK, a minister told Parliament that 32 government services were unavailable, largely as a precaution, with no confirmed compromise of central government systems [169, 170] |
+| 23 Oct | CrowdStrike's chief executive told CNBC: "You're going to see a lot of breaches happening in the coming months from this." The same day, CrowdStrike's own threat team said it had seen no successful exploitation in the wild [171, 172] |
+| 24-29 Oct | Researchers confirmed working attacks. A university tracker logged more than 50,000 exploitation attempts from over 600 addresses in 70 countries. CISA listed both flaws as actively exploited on 26 October. On 29 October, Palo Alto Networks reported attacks on firewall management screens exposed to the internet [166, 171] |
+| 21-29 Oct | The Central Bank of Trinidad and Tobago posted no communication on the flaws. Its website posts in the period covered a museum open day, a climate-risk speech, an insurance notice and bank fee schedules [182] |
+
+*A private letter from the Central Bank to licensees cannot be ruled out.*
+
+The same fortnight brought other developments relevant to this report:
+
+| Development | What is known | Status and caveats |
+|---|---|---|
+| Polymarket, the prediction-market platform (29 Oct) | Trading on its international platform was halted for about an hour after "one of our third party providers was compromised". A security firm traced the theft to a compromised script from a web-performance vendor that sold logged-in users' positions and moved their funds. Estimates of losses range from about US$2.2 million to US$2.7 million. Polymarket says anyone affected "will be made whole" [176] | Confirmed by the company; the loss total and vendor are not confirmed by Polymarket. A similar third-party script compromise cost users about US$3 million in June 2026. No AI use reported |
+| US Defense Department personnel data (disclosed September; lawsuit filed 20 Oct) | Unauthorised users accessed a Defense Manpower Data Center file server holding unencrypted personal data, including Social Security numbers, from October 2025 until 16 July 2026: about 2.76 million living and 294,000 deceased people [177] | Confirmed by the Defense Department. Undetected for about nine months; no attacker named; no misuse reported. No AI use reported |
+| US military commissaries (reported 29 Oct) | Reuters, citing four unnamed officials, reported that the Pentagon is treating freezer failures that spoiled food at at least six commissaries in late August as a suspected cyberattack. A Cyber Command unit is involved. In France, about 700 supermarkets had refrigeration controls compromised in October [177] | Suspected only; no cause confirmed. The commissary agency earlier attributed one European outage to equipment wear |
+| Incident-response firms under strain (19-28 Oct) | Sophos's security chief said its internal team handled seven incidents in one week ("A year ago, that would have been a quarter's worth") and that its response team "has never been busier and is forecasting an industry-wide capacity crunch". A former NSA cybersecurity director posted that response firms are "saturated & turning away work" [173] | Anecdotal; no firm has published backlog or response-time data. Measured indicators also rose: Arctic Wolf's monthly investigations were up 21% on a year earlier, and Coveware's median ransom payment rose 167% in the third quarter to US$400,000 [174] |
+| AI agents in a mass intrusion (reported 19-21 Oct) | Reuters reported that one hacker's AI agents breached about 100 companies, including Deere, SharkNinja and Cummins, using about US$5,000 of AI model usage [175] | Reported via Fortune's account of Reuters; company confirmations not reviewed |
+| New agentic campaigns in Latin America (21 Oct) | CrowdStrike described four previously unreported actors using AI agent frameworks; one had compromised at least 15 healthcare organisations in Argentina [180] | Vendor report |
+| Haiti (19-21 Oct) | Haiti's central bank barred financial institutions from negotiating with cybercriminals who demand ransoms. Capital Bank Haiti's online banking was still down on 21 October after what the bank calls a "technical incident" [179] | The central bank's notice is confirmed; a ransomware group's claim against the bank is unverified |
+| Fortune, "The attackers are winning" (29 Oct) | Security-company executives at a Fortune and Lightspeed event said AI gives attackers the upper hand. Lightspeed's survey of 200 large US companies' security chiefs (September 2026) found 79% reported a confirmed or suspected AI-related incident in the past year [178] | The speakers sell security products. Confirmed AI incidents in the survey fell from 37% to 16% while suspected ones rose from 38% to 63%, which shows how hard it is to tell when AI was used |
+
+**What October shows for Trinidad and Tobago:**
+
+- **Machine-found flaws are now mass-exploited within days.** Regulators abroad responded within one day with "patch or disconnect" instructions.
+- **TT-CSIRT met that pace on the most important flaw of the month.** On public evidence, the Central Bank did not.
+- **The "have-nots" are the small firms.** CrowdStrike's chief executive reportedly described them as "the smaller companies that don't have the expertise; they don't have the money behind it". [172] In Trinidad and Tobago, those are the credit unions, small insurers, brokers and e-money firms identified in Section 8.
+- **Vendors and third-party code remain the main route.** Polymarket's loss came through a third-party script on its website, as Japan's banks lost data through an email vendor.
+- **Even large, well-funded organisations miss intrusions for months.** The US Defense Department's personnel agency is one example.
+
+
 ## 3. Chinese and open-weight models: a real risk, often misdescribed
 
 ### Why "open-weight" is the issue
@@ -278,7 +333,7 @@ Swarms also have clear limits:
 
 | Measure | Attackers | Defenders |
 |---|---|---|
-| From published flaw to attack | Mandiant: mean time-to-exploit was an estimated minus 7 days in 2025, meaning exploitation often starts before a patch exists [131]. VulnCheck: 29% of flaws exploited in 2025 were exploited on or before the day they were published [132] | Only 26% of critical known-exploited flaws were fully fixed by organisations in 2025, down from 38% (Verizon, via the BIS) [44] |
+| From published flaw to attack | Mandiant: mean time-to-exploit was an estimated minus 7 days in 2025, meaning exploitation often starts before a patch exists [131]. VulnCheck: 29% of flaws exploited in 2025 were exploited on or before the day they were published [132] | Only 26% of critical known-exploited flaws were fully fixed by organisations in 2025, down from 38% (Verizon, via the BIS) [44]. The median company rated by Moody's takes 87 days to fix half of its known-exploited flaws [181] |
 | Inside a network | CrowdStrike: average time from initial access to moving through the network was 29 minutes in 2025; the fastest was 27 seconds [133] | Mandiant: global median time an intruder goes undetected was 14 days [131] |
 | Finding and fixing flaws with AI | Critical newly published flaws rose from about 10 a day in 2022-25 to almost 20 a day after 1 April 2026 [43] | In DARPA's AI Cyber Challenge, autonomous systems found 86% of planted flaws and patched 68%, in about 45 minutes per patch [136]. But of about 530 serious open-source flaws that Anthropic found and disclosed by 22 May 2026, only 75 had been patched. Many were still inside the 90-day disclosure window, but Anthropic also said maintainers were "severely capacity constrained" [134] |
 
@@ -591,11 +646,12 @@ These limit the reach of an attack on digital payment channels. Foreign exchange
 | The PaperCut swarm went from its first break-in to 440 compromised servers in about 45 hours [116] | Banks must notify the Central Bank within 24 hours and report within 72. The whole campaign could run its course before a bank's full report was due. That measures how fast the regulator would learn, not how fast banks respond, which is not public [64, 65] |
 | Check Point's firewall flaw CVE-2026-85102 was fixed on 9 September and attacked from 12 September; the PaperCut flaw was attacked about four days after its advisory [116, 139] | TT-CSIRT warned about the Check Point flaw on 23 September, 11 days after attacks began. For 10 of those days the vendor had not yet confirmed exploitation either. TT-CSIRT issued no PaperCut warning [138, 139] |
 | In 2025, criminal intruders began moving from the first compromised machine to others 29 minutes after initial access, on average [133] | No public data show how fast Trinidad and Tobago institutions detect or contain an intrusion. In a review covering January 2020 to March 2022, four of the seven banks reviewed operated a round-the-clock security operations centre; some also used an outside managed security provider, and three relied on the same one [66] |
+| PHP2Shell (October 2026): fixed on 21 October, listed by CISA as exploited on 26 October, with attacks on firewall management screens reported on 29 October [165, 166, 171] | TT-CSIRT warned on 21 October. New York's financial regulator told its firms on 22 October to patch or disconnect. The Central Bank posted nothing on the flaws between 21 and 29 October [167, 168, 182] |
 | Exploitation often begins before a patch exists [131] | When TT-CSIRT does warn, its advisories come a median of two to three days after the vendor or CISA [138] |
 
 *Comparison of public data. Dates may differ by a day because of time zones.*
 
-TT-CSIRT is sometimes ahead. It warned about one SharePoint flaw 29 days before CISA listed it as exploited, and about a PHP flaw on the vendor's release day. [138] But on public evidence it works as a relay of other countries' warnings. Nothing published shows that it scans for, or receives data on, vulnerable systems inside the country.
+TT-CSIRT is sometimes ahead. It warned about one SharePoint flaw 29 days before CISA listed it as exploited, and about the PHP2Shell flaws, the most serious of the month, on the day the fix was released, five days before CISA listed them as exploited. [138, 167] But on public evidence it works as a relay of other countries' warnings. Nothing published shows that it scans for, or receives data on, vulnerable systems inside the country.
 
 ### How the next two years could unfold
 
@@ -639,9 +695,9 @@ The ratings are analytical judgments from public evidence and are not weighted. 
 |---|---:|---|
 | Technical controls at the largest banks | 3.0 | International frameworks, 24x7 monitoring and, for foreign-owned banks, parent-group programmes reported; app-based login codes at RBC; SMS codes and limited payee verification persist; First Citizens discloses little [54, 66, 83, 146] |
 | Central Bank rules on paper | 3.0 | 24/72-hour reporting since 2023, self-assessment and testing expectations; key controls only "recommended"; AI named as a supervisory risk but absent from the cyber guideline [64, 65, 67] |
-| Supervisory capacity and speed | 2.0 | Self-assessments, incident reporting, an e-fraud survey and examiner training; but one joint cyber examination in a year, an unpublished framework and no public response to frontier AI [62, 67, 68] |
+| Supervisory capacity and speed | 2.0 | Self-assessments, incident reporting, an e-fraud survey and examiner training; but one joint cyber examination in a year, an unpublished framework, no public response to frontier AI and no public communication on the October 2026 PHP flaws [62, 67, 68, 182] |
 | National cyber and data-protection law | 1.0 | Cybercrime bill lapsed; data-protection obligations unproclaimed; no breach-notification law [73, 74] |
-| National warning and incident response | 1.5 | Real operational capacity; but no legal mandate, no published staffing or hours, not in FIRST, a 169-day publication gap, and warnings on only 13 of 222 actively exploited flaws in 2026 [77, 79, 138, 140] |
+| National warning and incident response | 1.5 | Real operational capacity; but no legal mandate, no published staffing or hours, not in FIRST, a 169-day publication gap, and warnings on only 13 of 222 actively exploited flaws in 2026, although it warned on PHP2Shell the day the fix appeared [77, 79, 138, 140, 167] |
 | Sector information sharing | 2.0 | Industry committees, a Central Bank-convened fraud group and regional agreements; no formal local platform [62, 66, 69, 85] |
 | Customer authentication and payment controls | 2.5 | Multi-factor login is common and some banks offer tokens or app approval; SMS codes remain widely used or selectable; no confirmation of payee described [83] |
 | Fraud recovery and cross-border freezing | 1.5 | Coordination began with the Central Bank's October 2025 meeting, but no protocol has been published; a business chamber called for one in 2026 [56, 69] |
@@ -680,7 +736,7 @@ The question is not whether a group could break into Trinidad and Tobago's best-
 | AI-written phishing, texts and calls lead to account takeover via stolen codes or SIM swaps | Phishing and email compromise account for 296 of the 485 incidents reported to TT-CSIRT since 2019; SMS codes are widespread; TSTT leak data exist | High | Many individual losses, with elderly customers a particular concern; erosion of trust | Low |
 | Rapid exploitation of an unpatched internet-facing system at a credit union, insurer, broker or vendor, followed by ransomware or extortion | Venture Credit Union and insurers already hit; the Korean "side-door" pattern; national advisory gaps | High | Outages lasting days to weeks; data leaks | Low |
 | Deepfake or synthetic identities used to open accounts for laundering | FIUTT reports a rise in onboarding fraud; digital account opening is spreading [58] | Medium to high | Laundering; damage to international standing | Low: FIUTT's advisory does not address liveness or deepfake detection |
-| Automated sweep by AI agents exploiting a newly published flaw in internet-facing software at many organisations at once | The PaperCut campaign, exploited about four days after the vendor's advisory; national warnings cover few exploited edge flaws | High | Many simultaneous incidents at weaker firms; outages and data leaks | Low |
+| Automated sweep by AI agents exploiting a newly published flaw in internet-facing software at many organisations at once | The PaperCut campaign, exploited about four days after the vendor's advisory; the October 2026 PHP2Shell wave; national warnings cover few exploited edge flaws | High | Many simultaneous incidents at weaker firms; outages and data leaks | Low |
 | Breach of a vendor that sends customer emails or texts, hosts systems or monitors security for several institutions | Ymirlink and IDC Frontier in Japan; local institutions outsource these services | Medium | Customer data exposed across institutions, followed by tailored phishing | Low: no public rule on how fast vendors must report breaches |
 | Compromise of a shared provider such as a payment switch, core vendor, security provider or telecom | Infolink concentration; the JETS breach; three banks sharing a security provider | Low to medium | Potentially system-wide | Unknown; low on public evidence |
 | AI-assisted intrusion into a large bank's core network | GTG-1002 targeted financial institutions; AI lowers the cost of trying | Low to medium | High | Medium |
@@ -706,6 +762,7 @@ Most of the required measures are rules and coordination, not expensive technolo
 | Publish aggregate incident and fraud statistics | CBTT, TT-CSIRT, TTPS | Turns anecdotes into evidence and lets progress be measured |
 | Require an enforced DMARC email policy (reject, or quarantine as a first step) on every domain used to contact customers, within 90 days | CBTT and TTSEC for their licensees; TATT for telecoms; the Credit Union League to press credit unions until a supervisor exists | 15 of 33 institutions checked do not enforce it; US federal agencies have had to since 2018 [161] |
 | Warn within 24 hours on every flaw CISA lists as actively exploited in common internet-facing products, and use free national exposure feeds to alert the owners of vulnerable systems directly | TT-CSIRT | 2026 coverage was about 6% of listed flaws, and warnings came days after attacks began [138, 139] |
+| When a flaw is being mass-exploited, issue a same-day instruction to licensees to patch or disconnect affected internet-facing systems, and publish it | CBTT, TTSEC | New York's regulator did this within a day for PHP2Shell; the Central Bank published nothing [168, 182] |
 | Agree in advance when banks, Infolink and key vendors would take public services offline during an attack, including shared and cloud systems | CBTT with banks and Infolink | Japan's regulators asked for this in May 2026; the FEC had to shut down mid-attack [103, 114] |
 | Require vendors that hold customer data or send customer messages to report a suspected breach to the institution within 24 hours | CBTT, TTSEC | Japanese banks announced 11 days after their email vendor detected its breach [106, 107] |
 
@@ -738,6 +795,8 @@ Most of the required measures are rules and coordination, not expensive technolo
 | Enforced DMARC across institutions (18 of 33 on 29 October 2026) | A cheap, visible test of whether institutions act on basic advice |
 | Renewal of Infolink's card-security certificate (valid to 6 November 2026) [149] | A routine check on the payment switch's controls |
 | New open-weight model releases and AISI, CAISI or Epoch evaluations | Shows when freely downloadable models reach today's restricted frontier |
+| Any reported PHP2Shell compromise in Trinidad and Tobago, and any Central Bank communication on it | The first local test of a machine-speed exploitation wave |
+| Incident-response capacity: published backlogs or response times from response firms and insurers | Shows whether the reported strain on responders is real and lasting |
 
 ### Final judgment
 
@@ -759,7 +818,7 @@ AI multiplies exactly these weaknesses. It makes impersonation more convincing, 
 
 The evidence does **not** show that a successful AI-driven attack on a local bank has occurred, that open-weight models outperform US models, or that a systemic cyber crisis is imminent. Losses to date have been material but not systemic, and strong capital and a cash fallback limit the damage to the financial system itself. Nor can public evidence show how well individual banks would hold up. Determined groups have breached financial institutions in far larger and better-resourced systems, so readiness is a matter of degree everywhere.
 
-**The appropriate conclusion is a large and widening readiness gap in the framework around the financial system.** The cheapest fixes are regulatory and organisational, and could begin within weeks. Every month without them leaves attackers' falling costs to meet defences that are changing only slowly. With capability doubling every four to five months and freely downloadable models less than a year behind, the window to act before swarm-scale attacks reach the periphery is short.
+**The appropriate conclusion is a large and widening readiness gap in the framework around the financial system.** The cheapest fixes are regulatory and organisational, and could begin within weeks. Every month without them leaves attackers' falling costs to meet defences that are changing only slowly. With capability doubling every four to five months and freely downloadable models less than a year behind, the window to act before swarm-scale attacks reach the periphery is short. The October 2026 PHP2Shell wave was a live test. TT-CSIRT warned on the day, but the Central Bank said nothing publicly, while supervisors abroad told firms within a day to patch or disconnect.
 
 <!-- PAGEBREAK -->
 
@@ -1151,5 +1210,43 @@ Domains were chosen to cover the controls that international authorities emphasi
 **[163]** IMF (April 2023), *Trinidad and Tobago: strengthening cybersecurity in financial institutions*, technical assistance high-level summary. [Summary](https://www.imf.org/en/publications/high-level-summary-technical-assistance-reports/issues/2023/04/17/trinidad-and-tobago-strengthening-cybersecurity-in-financial-institutions-532437).
 
 **[164]** Citi, *Global presence: Trinidad and Tobago* (viewed 29 October 2026). [Page](https://www.citigroup.com/global/about-us/global-presence/trinidad-and-tobago).
+
+## References: late October 2026 developments (Section 2)
+
+**[165]** PHP project (21 October 2026), release announcements for PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35; Calif, *PHP2Shell* write-up; Help Net Security (21 October 2026), quoting Wiz. [PHP](https://www.php.net/archive/2026.php) · [Calif](https://calif.io/php2shell) · [Help Net Security](https://www.helpnetsecurity.com/2026/10/21/php2shell-php-vulnerabilities-patched-cve-2026-109618-cve-2026-109619/).
+
+**[166]** CISA (21 October 2026), *Critical vulnerabilities in PHP require immediate patching*; CISA (26 October 2026), addition of CVE-2026-109618 and CVE-2026-109619 to the known exploited vulnerabilities catalog. [Alert](https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching) · [KEV addition](https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog).
+
+**[167]** TT-CSIRT (21 October 2026), advisory 462.21.10.26, *Critical remote code execution vulnerabilities in PHP (CVE-2026-109618 and CVE-2026-109619)*. [Advisory](https://ttcsirt.gov.tt/tt-csirt-462-21-10-26-critical-remote-code-execution-vulnerabilities-in-php-cve-2026-109618-and-cve-2026-109619/).
+
+**[168]** New York Department of Financial Services (22 October 2026), industry letter on patching the PHP vulnerabilities. [Letter](https://www.dfs.ny.gov/industry_guidance/industry_letters/il20261022-cyber-php-patching).
+
+**[169]** UK NCSC (21 October 2026), *Critical security issue affecting PHP*; The Register (22 October 2026), on UK government services taken offline. [NCSC](https://www.ncsc.gov.uk/news/critical-security-issue-affecting-php) · [The Register](https://www.theregister.com/security/2026/10/22/php2shell-puts-dozens-of-uk-government-services-out-of-service/5304840).
+
+**[170]** Jiji Press via Nippon.com (22 October 2026), on Japanese banks' precautionary suspensions; American Banker (23 October 2026), *Banks dodge early damage from PHP2Shell flaws*. [Nippon.com](https://www.nippon.com/en/articles/-/55595) · [American Banker](https://www.americanbanker.com/news/banks-dodge-early-damage-from-php2shell-flaws).
+
+**[171]** Palo Alto Networks, security advisory for CVE-2026-109618 (updated 29 October 2026); CrowdStrike (23 October 2026), *Obstacles to weaponizing PHP2Shell likely constrain exploitation*; The Hacker News (October 2026), on confirmed exploitation; Delft University Threat Intelligence Lab, PHP2Shell tracker (viewed 29 October 2026). [Palo Alto Networks](https://security.paloaltonetworks.com/CVE-2026-109618) · [CrowdStrike](https://www.crowdstrike.com/en-us/blog/obstacles-to-weaponizing-php2shell-likely-constrain-exploitation/) · [The Hacker News](https://thehackernews.com/2026/10/cisa-confirms-active-exploitation-of.html) · [Tracker](https://php2shell.delftintellab.com/).
+
+**[172]** George Kurtz, CrowdStrike chief executive: CNBC interview (23 October 2026), as reported by 24/7 Wall St.; *The Compound and Friends* podcast (26 October 2026) and *Mad Money* (26 October 2026), as reported by Yahoo Finance. The *Mad Money* quote is from secondary reporting. CrowdStrike shares rose 8.25% on 23 October. [24/7 Wall St.](https://247wallst.com/investing/2026/10/24/crowdstrikes-ceo-says-a-wave-of-cyber-attacks-are-coming/) · [Podcast](https://finance.yahoo.com/markets/stocks/articles/crowdstrike-ceo-black-october-only-165449278.html) · [Mad Money](https://finance.yahoo.com/markets/stocks/articles/black-october-changing-companies-buy-112003796.html).
+
+**[173]** Sophos (26 October 2026), *The breachpocalypse is here*; Dataminr (27 October 2026), *Examining the vulnpocalypse and defensive responses*, which calls reports of saturated response firms anecdotal. [Sophos](https://www.sophos.com/en-us/blog/the-breachpocalypse-is-here) · [Dataminr](https://www.dataminr.com/resources/intel-brief/examining-the-vulnpocalypse-and-defensive-responses/).
+
+**[174]** Arctic Wolf (27 October 2026), *2026 Agentic Security Operations Report*, press release; Coveware by Veeam (28 October 2026), *Cyber extortion payment trends Q3 2026*. [Arctic Wolf](https://arcticwolf.com/resources/press-releases/arctic-wolf-2026-agentic-security-operations-report-reveals-ai-now-resolves-the-majority-of-security-investigations-in-its-agentic-soc/) · [Coveware](https://www.veeam.com/blog/cyber-extortion-payment-trends-q3-2026.html).
+
+**[175]** Fortune (21 October 2026), *Powerful new AI models are powering a growing wave of cyber attacks, experts say*, citing Reuters. [Article](https://fortune.com/2026/10/21/powerful-new-ai-models-are-powering-a-growing-wave-of-cyber-attacks-experts-say/).
+
+**[176]** Polymarket status page (29 October 2026); The Block (29 October 2026); Hudson Rock (InfoStealers, 29 October 2026), on the third-party script; BleepingComputer (June 2026), on the earlier vendor compromise. [Status page](https://status.polymarket.com/history/1) · [The Block](https://www.theblock.co/news/defi/2026-10-29-polymarket-exploit-2-5-million-cancel-only-mode-432158) · [Hudson Rock](https://www.infostealers.com/article/polymarket-breach-alert-wallet-draining-code-found-in-a-third-party-script/) · [BleepingComputer](https://www.bleepingcomputer.com/news/security/polymarket-customers-lose-3-million-in-supply-chain-attack/).
+
+**[177]** Military Times (24 September 2026) and TIME (29 September 2026), on the Defense Manpower Data Center breach; Federal News Network (October 2026), on the lawsuit; Reuters, syndicated by KELO (29 October 2026), on commissary freezer failures; Stars and Stripes (30 September 2026), on the agency's earlier explanation. [Military Times](https://www.militarytimes.com/news/pentagon-congress/2026/09/24/military-personnel-data-exposed-in-breach-agency-warns/) · [TIME](https://time.com/article/2026/09/29/pentagon-department-defense-manpower-data-center-breach-personnel-information/) · [Federal News Network](https://federalnewsnetwork.com/defense-news/2026/10/pentagon-sued-over-data-breach-affecting-more-than-3-million-people/) · [Reuters via KELO](https://kelo.com/2026/10/29/exclusive-pentagon-treating-military-base-freezer-malfunctions-as-suspected-cyberattack-officials-say/) · [Stars and Stripes](https://www.stripes.com/theaters/europe/2026-09-30/freezer-outages-europe-commissaries-23013166.html).
+
+**[178]** Fortune (29 October 2026), *"The attackers are winning": Cyber 60 founders say AI is giving hackers the upper hand*; Lightspeed Venture Partners, *Cyber 60 2026-2027* and CISO survey (Wakefield Research, 200 US CISOs, 4-14 September 2026). [Fortune](https://fortune.com/2026/10/29/attackers-winning-cyber-60-founders-ai-giving-hackers-upper-hand/) · [Lightspeed](https://lsvp.com/cyber60-2026-2027/).
+
+**[179]** Banque de la République d'Haïti (19 October 2026), public notice; The Haitian Times (21 October 2026), *Capital Bank Haiti resumes services, online banking down*. In French and English. [Notice](https://www.brh.ht/wp-content/uploads/avis-au-public-19-octobre-2026.pdf) · [Haitian Times](https://haitiantimes.com/2026/10/21/capital-bank-haiti-resumes-services-online-banking-down/).
+
+**[180]** CrowdStrike (21 October 2026), *CrowdStrike uncovers new agentic AI campaigns*. Vendor report. [Blog](https://www.crowdstrike.com/en-us/blog/crowdstrike-uncovers-new-agentic-ai-campaigns/).
+
+**[181]** Insurance Journal (27 October 2026), on Moody's Ratings research on remediation of known exploited vulnerabilities. [Article](https://www.insurancejournal.com/news/international/2026/10/27/890438.htm).
+
+**[182]** Central Bank of Trinidad and Tobago, website posts and published files, 15-29 October 2026 (read 29 October 2026 from the site's public listing). [Website](https://www.central-bank.org.tt/).
 
 *Currency amounts are as published. Conclusions, ratings and scenarios are the report's analysis. They are not statements by the Central Bank of Trinidad and Tobago, TT-CSIRT, any bank or any other institution.*
