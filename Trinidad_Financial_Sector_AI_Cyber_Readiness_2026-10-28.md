@@ -2,7 +2,7 @@
 
 ## Trinidad and Tobago's banks and financial institutions in the age of AI-enabled hacking
 
-**Economic research | Shane Dante Bideshi | 28 October 2026, revised and extended 29 October 2026**
+**Economic research | Shane Dante Bideshi | 28 October 2026, revised and extended 29-30 October 2026**
 
 ### Executive assessment
 
@@ -27,13 +27,14 @@ None of these has been linked to AI. Separately, in October Microsoft reported a
 - CrowdStrike's chief executive predicted "a lot of breaches happening in the coming months from this".
 - Incident-response firms describe being stretched, although none has published backlog data.
 
-The same fortnight brought three more relevant incidents:
+The same fortnight brought more relevant incidents:
 
+- **On 29 October, attackers took an estimated US$6.3 billion from Binance, the world's largest crypto exchange.** About US$3 billion has been frozen. It is the largest crypto theft on record, more than four times the previous record and more than double all crypto stolen in 2025. Binance's preliminary finding is that it began with one compromised engineer's laptop. Blockchain-analytics firms attribute it to North Korea; Binance and governments have not. No AI use has been reported.
 - About US$2.2-2.7 million was taken from Polymarket users through a compromised third-party script.
 - The US Defense Department confirmed that one of its agencies took about nine months to notice unauthorised access to personnel records of about 3 million people.
 - Haiti's central bank barred financial institutions from paying cyber ransoms, while one Haitian bank's online banking stayed down after what it calls a "technical incident".
 
-Trinidad and Tobago's national response team warned about the PHP flaws on the day the fix was released. The Central Bank published nothing on them.
+Trinidad and Tobago's national response team warned about the PHP flaws on the day the fix was released. By 30 October, the Central Bank and the securities regulator had published nothing on them or on Binance.
 
 **AI capability is accelerating, and agent "swarms" are real.** The length of task that frontier models can complete has been doubling roughly every four to five months, and freely downloadable models trail the frontier by four to seven months. Trackers differ on the pace: one cyber index has risen roughly in a straight line since early 2025, and evaluators stress that their trends are not forecasts. In June 2026 the heads of the Five Eyes cyber agencies warned: "The timeline is not years, it is months." Swarms are not unstoppable, however. In the largest documented case, the attackers had taken full control of the network at only 12 of the 395 organisations whose servers they compromised when last observed, and a web application firewall stopped them in at least one case.
 
@@ -72,14 +73,14 @@ On this report's scorecard, which mainly measures the framework around instituti
 | Has AI changed hacking? | Yes. Between 2024 and 2026 it moved from drafting phishing emails to running most steps of real intrusions. It mainly makes existing techniques faster and cheaper; it has not invented new types of attack. |
 | Do Chinese and open-weight models matter? | Yes, but not because they are the best. Most documented AI-assisted intrusions used closed US models. Open-weight models are good enough against weakly defended targets, cheap, and beyond the reach of any company's safety monitoring. |
 | What happened at the US election regulator and the Japanese banks? | The FEC shut its filing systems for about two days after an attempted breach; no data theft or AI use has been confirmed. Japanese banks lost customer email data through an email-delivery vendor, and a hosting service for currency traders was used for unauthorised trades and a large ransom demand. The common lesson is third-party and shared-service risk. |
-| What is "Black October"? | An AI-found flaw in PHP, which runs about 70% of websites, was fixed on 21 October and attacked within days. Regulators abroad told firms to patch or disconnect within a day. TT-CSIRT warned on the day; the Central Bank has said nothing publicly. Polymarket, the US Defense Department and a Haitian bank also reported incidents in October. |
+| What is "Black October"? | An AI-found flaw in PHP, which runs about 70% of websites, was fixed on 21 October and attacked within days. Regulators abroad told firms to patch or disconnect within a day. TT-CSIRT warned on the day; the Central Bank has said nothing publicly. Binance lost an estimated US$6.3 billion on 29 October, the largest crypto theft on record. Polymarket, the US Defense Department and a Haitian bank also reported incidents in October. |
 | Has an AI-enabled attack hit a T&T bank? | Not on public evidence. Locally, AI has so far appeared in deepfake investment scams. Losses have come from ransomware, impersonation and account takeover. |
 | Are the largest banks prepared? | Partly, against common attacks. The Canadian-owned banks publish the strongest login controls. SMS codes remain selectable at the largest bank, and none of the banks reviewed publicly describes confirmation-of-payee checks. Public evidence cannot show how well internal defences work. |
 | Is the wider system prepared? | No. The main gaps are law, the speed of supervision and national warnings, information sharing, incident and loss data, shared infrastructure, and the credit-union and securities periphery. |
 | Will future AI swarms overwhelm Trinidad and Tobago? | On current trends, yes for many smaller institutions at the periphery within about a year; not, on current evidence, the large banks or the system as a whole. The measured gap is speed and coverage, not only headcount. |
 | What would most improve readiness quickly? | A Central Bank frontier-AI supervisory letter, enforced email authentication at licensed institutions, faster national warnings, a sector payment-verification standard, a rapid fraud-freeze protocol and published incident data. Each can be done within months without new legislation. |
 
-*Scope and evidence:* research completed 28 October 2026 and extended on 29 October 2026, using public sources only: regulator and government documents, parliamentary records, company reports, AI-developer and security-vendor threat reports, and news coverage. On 29 October 2026 the research also read public DNS records for 33 institutions and made one request each to their public home page and to the standard security.txt location. No system was scanned or tested, and no confidential supervisory information was available. Ratings are analytical judgments. A public-evidence review can understate controls that institutions do not disclose and overstate controls that exist only on paper. Sources and methods appear at the end.
+*Scope and evidence:* research completed 28 October 2026 and extended on 29 and 30 October 2026, using public sources only: regulator and government documents, parliamentary records, company reports, AI-developer and security-vendor threat reports, and news coverage. On 29 October 2026 the research also read public DNS records for 33 institutions and made one request each to their public home page and to the standard security.txt location. No system was scanned or tested, and no confidential supervisory information was available. Ratings are analytical judgments. A public-evidence review can understate controls that institutions do not disclose and overstate controls that exist only on paper. Sources and methods appear at the end.
 
 <!-- PAGEBREAK -->
 
@@ -197,7 +198,7 @@ Apart from one staff mailbox at Hachijuni Nagano Bank, taken over through phishi
 
 ### Late October 2026: "Black October"
 
-*Added 29 October 2026. Events are recent, and some details may change.*
+*Added 29 October 2026 and updated on 30 October 2026. Events are recent, and some details may change.*
 
 On 21 October, the PHP project fixed two critical flaws (CVE-2026-109618 and CVE-2026-109619, nicknamed "PHP2Shell"). They can let an attacker run code on a web server without logging in. PHP runs about 70% of websites. Researchers at Calif, OpenAI and Wiz found the flaws with AI help, and Wiz says frontier AI models turned "a longstanding flaw into an exploit". PHP warned that "there are no complete mitigations, updating is the only safe choice". [165, 166]
 
@@ -208,7 +209,9 @@ On 21 October, the PHP project fixed two critical flaws (CVE-2026-109618 and CVE
 | 22 Oct | Some Japanese banks partly suspended online services as a precaution. A US credit union with about US$8.9 billion of assets took its website and digital banking offline for a day to patch. In the UK, a minister told Parliament that 32 government services were unavailable, largely as a precaution, with no confirmed compromise of central government systems [169, 170] |
 | 23 Oct | CrowdStrike's chief executive told CNBC: "You're going to see a lot of breaches happening in the coming months from this." The same day, CrowdStrike's own threat team said it had seen no successful exploitation in the wild [171, 172] |
 | 24-29 Oct | Researchers confirmed working attacks. A university tracker logged more than 50,000 exploitation attempts from over 600 addresses in 70 countries. CISA listed both flaws as actively exploited on 26 October. On 29 October, Palo Alto Networks reported attacks on firewall management screens exposed to the internet [166, 171] |
-| 21-29 Oct | The Central Bank of Trinidad and Tobago posted no communication on the flaws. Its website posts in the period covered a museum open day, a climate-risk speech, an insurance notice and bank fee schedules [182] |
+| 28-29 Oct | CISA listed a Linux flaw ("Fragnesia") that can be chained with PHP2Shell to run commands with full control. A security firm, with findings it says Palo Alto's Unit 42 verified, reported that a suspected China-linked operator had taken over about 25 firewalls and servers. These included servers in a US government-affiliated environment. Claude Code was found on the attacker's systems, but the firm has "no direct evidence" AI wrote the exploit. No bank has publicly reported a compromise [183] |
+| 23-26 Oct | Jamaica's government ordered ministries to apply the PHP fixes and report any sign of compromise, after the breach at JETS, the island's payment switch operator. Puerto Rico's technology agency found at least five government systems that needed updates [184] |
+| 21-30 Oct | The Central Bank of Trinidad and Tobago posted no communication on the flaws. Its website posts from 21 to 23 October covered a museum open day, a climate-risk speech, an insurance notice and bank fee schedules, and it posted nothing after 23 October. TT-CSIRT's last advisory remained the 21 October PHP warning [182, 185] |
 
 *A private letter from the Central Bank to licensees cannot be ruled out.*
 
@@ -216,13 +219,15 @@ The same fortnight brought other developments relevant to this report:
 
 | Development | What is known | Status and caveats |
 |---|---|---|
-| Polymarket, the prediction-market platform (29 Oct) | Trading on its international platform was halted for about an hour after "one of our third party providers was compromised". A security firm traced the theft to a compromised script from a web-performance vendor that sold logged-in users' positions and moved their funds. Estimates of losses range from about US$2.2 million to US$2.7 million. Polymarket says anyone affected "will be made whole" [176] | Confirmed by the company; the loss total and vendor are not confirmed by Polymarket. A similar third-party script compromise cost users about US$3 million in June 2026. No AI use reported |
+| Binance, the world's largest crypto exchange (29-30 Oct) | Binance confirmed a "security incident" with an estimated impact of "around $6.3B", of which about US$3 billion has been frozen. Its preliminary finding is that "a compromised DevOps engineer's laptop" let an attacker reach a service container and "submit unauthorized withdrawal transactions", with "no evidence of any wallet private key leak". It later found "additional points of breach". Withdrawals were suspended. Binance says it will cover all losses from its user-protection fund and company funds, and has reserved over US$6.34 billion [186, 187] | Confirmed by Binance. Largest crypto theft on record: the previous record was about US$1.5 billion (Bybit, 2025), and all crypto stolen in 2025 totalled US$2.87 billion. TRM Labs, Chainalysis and Elliptic attribute it to North Korea's TraderTraitor group; Binance and governments have not. No AI use reported [25, 188] |
+| Polymarket, the prediction-market platform (29 Oct) | Trading on its international platform was halted for about an hour after "one of our third party providers was compromised". A security firm traced the theft to a compromised script from a web-performance vendor that sold logged-in users' positions and moved their funds. Estimates of losses range from about US$2.2 million to US$2.7 million. Polymarket says anyone affected "will be made whole" [176] | Confirmed by the company. Reuters and NBC, citing sources, name the vendor as DebugBear, which said it was "impacted by an ongoing security incident". Polymarket has not confirmed the vendor or the loss total. A similar third-party script compromise cost users about US$3 million in June 2026. No AI use reported [176] |
 | US Defense Department personnel data (disclosed September; lawsuit filed 20 Oct) | Unauthorised users accessed a Defense Manpower Data Center file server holding unencrypted personal data, including Social Security numbers, from October 2025 until 16 July 2026: about 2.76 million living and 294,000 deceased people [177] | Confirmed by the Defense Department. Undetected for about nine months; no attacker named; no misuse reported. No AI use reported |
 | US military commissaries (reported 29 Oct) | Reuters, citing four unnamed officials, reported that the Pentagon is treating freezer failures that spoiled food at at least six commissaries in late August as a suspected cyberattack. A Cyber Command unit is involved. In France, about 700 supermarkets had refrigeration controls compromised in October [177] | Suspected only; no cause confirmed. The commissary agency earlier attributed one European outage to equipment wear |
 | Incident-response firms under strain (19-28 Oct) | Sophos's security chief said its internal team handled seven incidents in one week ("A year ago, that would have been a quarter's worth") and that its response team "has never been busier and is forecasting an industry-wide capacity crunch". A former NSA cybersecurity director posted that response firms are "saturated & turning away work" [173] | Anecdotal; no firm has published backlog or response-time data. Measured indicators also rose: Arctic Wolf's monthly investigations were up 21% on a year earlier, and Coveware's median ransom payment rose 167% in the third quarter to US$400,000 [174] |
 | AI agents in a mass intrusion (reported 19-21 Oct) | Reuters reported that one hacker's AI agents breached about 100 companies, including Deere, SharkNinja and Cummins, using about US$5,000 of AI model usage [175] | Reported via Fortune's account of Reuters; company confirmations not reviewed |
 | New agentic campaigns in Latin America (21 Oct) | CrowdStrike described four previously unreported actors using AI agent frameworks; one had compromised at least 15 healthcare organisations in Argentina [180] | Vendor report |
-| Haiti (19-21 Oct) | Haiti's central bank barred financial institutions from negotiating with cybercriminals who demand ransoms. Capital Bank Haiti's online banking was still down on 21 October after what the bank calls a "technical incident" [179] | The central bank's notice is confirmed; a ransomware group's claim against the bank is unverified |
+| Haiti (19-21 Oct) | Haiti's central bank barred financial institutions from negotiating with cybercriminals who demand ransoms. Capital Bank Haiti's online banking was still down on 21 October after what the bank calls a "technical incident" [179] | The central bank's notice is confirmed. By 30 October the bank said its services were available again. A ransomware group's claim against the bank is unverified [179] |
+| India (reported 29-30 Oct) | Reuters, citing anonymous sources, reports that the Reserve Bank of India is pressing banks for evidence of cyber compliance and AI-risk preparedness. It has also asked them to examine weaknesses in the interfaces (APIs) that link them to non-bank lenders and fintechs. This follows a police complaint that about US$2 million was taken from two Mumbai non-bank lenders through more than 700 unauthorised transfers, after hackers compromised the interface used to send loan-disbursal instructions to their bank [189] | Reported; the central bank did not comment. The links between banks and fintechs are a growing route of attack |
 | Fortune, "The attackers are winning" (29 Oct) | Security-company executives at a Fortune and Lightspeed event said AI gives attackers the upper hand. Lightspeed's survey of 200 large US companies' security chiefs (September 2026) found 79% reported a confirmed or suspected AI-related incident in the past year [178] | The speakers sell security products. Confirmed AI incidents in the survey fell from 37% to 16% while suspected ones rose from 38% to 63%, which shows how hard it is to tell when AI was used |
 
 **What October shows for Trinidad and Tobago:**
@@ -232,6 +237,8 @@ The same fortnight brought other developments relevant to this report:
 - **The "have-nots" are the small firms.** CrowdStrike's chief executive reportedly described them as "the smaller companies that don't have the expertise; they don't have the money behind it". [172] In Trinidad and Tobago, those are the credit unions, small insurers, brokers and e-money firms identified in Section 8.
 - **Vendors and third-party code remain the main route.** Polymarket's loss came through a third-party script on its website, as Japan's banks lost data through an email vendor.
 - **Even large, well-funded organisations miss intrusions for months.** The US Defense Department's personnel agency is one example.
+- **One staff device can open the vault.** On Binance's preliminary account, the largest theft on record began with a compromised engineer's laptop that reached the system approving withdrawals. The controls that matter most are on staff devices with privileged access and on payment-approval systems.
+- **Local exposure to crypto theft runs through individuals.** Trinidad and Tobago's Virtual Assets Act bars virtual-asset businesses until 31 December 2026 unless they are in the regulatory sandbox, but it does not apply to individuals' personal use [190]. Residents who hold assets on foreign exchanges carry that risk directly, outside local supervision. That is this report's inference.
 
 
 ## 3. Chinese and open-weight models: a real risk, often misdescribed
@@ -249,6 +256,7 @@ Closed models such as Claude, GPT and Gemini run on their developers' servers. T
 | Kimi K3 (China) | UK AISI and CAISI, Jul 2026 | Completed a 32-step simulated corporate network attack in 1 of 10 attempts; "capable of autonomously attacking small, weakly defended and vulnerable enterprise systems, when directed to do so and given initial network access"; its safeguards did not prevent offensive attempts [35] |
 | GLM-5.3 (China) | CAISI, Sep 2026 | "The most cyber-capable open-weight model released to date", about 4 months behind the US frontier [36] |
 | GLM-5.3 (China) | Anthropic, Sep 2026 | Refusals fell from 95% to 6% after abliteration, costing an estimated US$1,200-4,400 of computing, with little capability loss. Anthropic is a commercial competitor [40] |
+| GLM-5.3 (China) | Irregular, reported by Reuters, Oct 2026 | Completed 3 of 13 multi-stage cyberattack scenarios at least once, "the strongest performance Irregular has recorded from an openly available AI model", and "did not refuse any of the offensive tasks tested" [191] |
 | Claude Mythos Preview (US, restricted release) | UK AISI, Apr 2026 | First model to complete the same 32-step range, in 3 of 10 attempts [33]; by July 2026 the most capable closed models solved it in 6 and 7 of 10 attempts [35] |
 
 *Benchmarks and simulated ranges differ; rows are not directly comparable. Capability "lags" are evaluators' estimates.*
@@ -796,6 +804,7 @@ Most of the required measures are rules and coordination, not expensive technolo
 | Renewal of Infolink's card-security certificate (valid to 6 November 2026) [149] | A routine check on the payment switch's controls |
 | New open-weight model releases and AISI, CAISI or Epoch evaluations | Shows when freely downloadable models reach today's restricted frontier |
 | Any reported PHP2Shell compromise in Trinidad and Tobago, and any Central Bank communication on it | The first local test of a machine-speed exploitation wave |
+| Binance's root-cause report, and any official attribution | Shows how a well-resourced financial platform was entered, and what banks should check in their own payment-approval systems |
 | Incident-response capacity: published backlogs or response times from response firms and insurers | Shows whether the reported strain on responders is real and lasting |
 
 ### Final judgment
@@ -826,7 +835,7 @@ The evidence does **not** show that a successful AI-driven attack on a local ban
 
 ### Evidence boundaries
 
-The report uses public research, official statistics, regulator and parliamentary documents, company disclosures, and threat reports from AI developers and security firms. Research was completed on 28 October 2026 and extended on 29 October 2026. No institution was contacted, tested or given an opportunity to comment, and no confidential supervisory information was available. Absence of a public incident does not mean absence of an incident: ransomware victims who pay are often not listed, and there is no general breach-notification duty.
+The report uses public research, official statistics, regulator and parliamentary documents, company disclosures, and threat reports from AI developers and security firms. Research was completed on 28 October 2026 and extended on 29 and 30 October 2026. No institution was contacted, tested or given an opportunity to comment, and no confidential supervisory information was available. Absence of a public incident does not mean absence of an incident: ransomware victims who pay are often not listed, and there is no general breach-notification duty.
 
 Several source types have interests to weigh:
 
@@ -1211,7 +1220,7 @@ Domains were chosen to cover the controls that international authorities emphasi
 
 **[164]** Citi, *Global presence: Trinidad and Tobago* (viewed 29 October 2026). [Page](https://www.citigroup.com/global/about-us/global-presence/trinidad-and-tobago).
 
-## References: late October 2026 developments (Section 2)
+## References: late October 2026 developments (Sections 2 and 3)
 
 **[165]** PHP project (21 October 2026), release announcements for PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35; Calif, *PHP2Shell* write-up; Help Net Security (21 October 2026), quoting Wiz. [PHP](https://www.php.net/archive/2026.php) · [Calif](https://calif.io/php2shell) · [Help Net Security](https://www.helpnetsecurity.com/2026/10/21/php2shell-php-vulnerabilities-patched-cve-2026-109618-cve-2026-109619/).
 
@@ -1248,5 +1257,23 @@ Domains were chosen to cover the controls that international authorities emphasi
 **[181]** Insurance Journal (27 October 2026), on Moody's Ratings research on remediation of known exploited vulnerabilities. [Article](https://www.insurancejournal.com/news/international/2026/10/27/890438.htm).
 
 **[182]** Central Bank of Trinidad and Tobago, website posts and published files, 15-29 October 2026 (read 29 October 2026 from the site's public listing). [Website](https://www.central-bank.org.tt/).
+
+**[183]** CISA, *Known exploited vulnerabilities catalog* (additions of 28 and 29 October 2026, including CVE-2026-46300); Dream (26 October 2026, updated 29 October), *Chained PHP2Shell exploit roots 25 servers*; The Record (29 October 2026). [KEV catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) · [Dream](https://dreamgroup.com/blog/chained-php2shell-exploit-roots-25-servers) · [The Record](https://therecord.media/php2shell-successful-exploitation-reports-emerge).
+
+**[184]** Office of the Prime Minister, Jamaica (23 October 2026, updated 26 October), *Minister Wheatley outlines government response to JETS cyber incident and critical web software vulnerabilities*; El Nuevo Día (22 October 2026), on Puerto Rico's response. [OPM Jamaica](https://opm.gov.jm/minister-wheatley-outlines-government-response-to-jets-cyber-incident-and-critical-web-software-vulnerabilities/) · [El Nuevo Día](https://www.elnuevodia.com/noticias/seguridad/notas/prits-atiende-vulnerabilidades-detectadas-en-el-lenguaje-php-utilizado-en-servidores-del-gobierno/).
+
+**[185]** TT-CSIRT, website posts listing (viewed 30 October 2026); Central Bank of Trinidad and Tobago, latest news listing (viewed 30 October 2026). [TT-CSIRT](https://www.ttcsirt.gov.tt/) · [CBTT](https://www.central-bank.org.tt/category/news/latest-news/).
+
+**[186]** Binance (30 October 2026), *Security incident update*; Decrypt (30 October 2026), *Binance finds additional points of breach in $6.3B hack*; CoinDesk (30 October 2026), *Binance arranges $6.34 billion to cover losses from record crypto hack*. [Binance](https://www.binance.com/en/support/announcement/detail/c5a8729a97ac486d963784d96c5642d7) · [Decrypt](https://decrypt.co/382203/binance-finds-additional-points-of-breach-in-6-3b-hack) · [CoinDesk](https://www.coindesk.com/business/2026/10/30/binance-arranges-usd6-34-billion-to-cover-losses-from-record-crypto-hack).
+
+**[187]** TechCrunch (29 October 2026), *Binance pauses withdrawals as hackers suspected of stealing billions in crypto*; Fox Business (30 October 2026), *Binance says security incident had estimated $6.3B impact*. [TechCrunch](https://techcrunch.com/2026/10/29/binance-pauses-withdrawals-as-hackers-suspected-of-stealing-billions-in-crypto/) · [Fox Business](https://www.foxbusiness.com/technology/binance-says-security-incident-had-estimated-6-3b-impact-3b-assets-frozen).
+
+**[188]** TRM Labs (30 October 2026), *North Korea steals USD 6.36 billion from Binance in the largest hack in history*; Elliptic (30 October 2026), *Binance: the largest hack in history*; The Block, on TRM's figure of US$2.87 billion stolen in 2025; The National (30 October 2026), on the absence of evidence of AI use. Analyst attributions, not official. [TRM Labs](https://www.trmlabs.com/resources/blog/north-korea-steals-usd-6-36-billion-from-binance-in-the-largest-hack-in-history) · [Elliptic](https://www.elliptic.co/insights/binance-largest-hack-in-history/) · [The Block](https://www.theblock.co/post/387453/illicit-actors-capture-nearly-3-of-crypto-liquidity-in-2025-trm) · [The National](https://www.thenationalnews.com/business/money/2026/10/30/binance-hack-shows-ai-could-make-crypto-attacks-more-dangerous-analysts-warn/).
+
+**[189]** Daijiworld (30 October 2026), citing Reuters, on the Reserve Bank of India's cyber scrutiny of banks and the Mumbai lenders' losses. Anonymous sources. [Article](https://daijiworld.com/news/newsDisplay?newsID=1333891).
+
+**[190]** Trinidad Express (6 January 2026), *Crypto firms must seek approval or halt operations*, on the Virtual Assets and Virtual Asset Service Providers Act, 2025. [Article](https://trinidadexpress.com/business/local/crypto-firms-must-seek-approval-or-halt-operations/article_7933b713-be42-4b60-a137-94182578d4bc.html).
+
+**[191]** Reuters via Investing.com (29 October 2026), *Chinese AI model carries out complex cyberattacks in controlled tests, researchers say*. [Article](https://www.investing.com/news/stock-market-news/chinese-ai-model-carries-out-complex-cyberattacks-in-controlled-tests-researchers-say-4981414).
 
 *Currency amounts are as published. Conclusions, ratings and scenarios are the report's analysis. They are not statements by the Central Bank of Trinidad and Tobago, TT-CSIRT, any bank or any other institution.*
