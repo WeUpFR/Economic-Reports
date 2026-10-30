@@ -66,6 +66,10 @@ No public evidence shows an AI-driven intrusion into a local bank, or a confirme
 
 **Would tomorrow's AI swarms be too much for Trinidad and Tobago? For many smaller institutions at the edges of the system, yes on current capacity, and the gap is widening. For the large banks and the system as a whole, not on current evidence, although a successful attack on shared infrastructure could change that.** One documented swarm campaign went from its first break-in to hundreds of victims in under two days. That is less than the 72 hours banks have to give the Central Bank a full incident report, so a bank's full report on such a campaign could arrive only after it had run its course, although a 24-hour initial notice would be due while it was still under way. Trinidad and Tobago's public warnings cover between one in six and one in ten exploited flaws in leading firewall, VPN and gateway products, and, when issued, follow the vendor's or CISA's notice by a median of two to three days, in one documented case 11 days after attacks began. In its 2024/25 financial year, the Central Bank carried out one joint IT and cyber on-site examination, of a single large bank. The large banks, backed by capital and, for the foreign-owned ones, parent groups, are better placed. The periphery is not. More staff alone will not close the gap. What closes it is the basics applied at machine speed: automated patching and warnings, phishing-resistant logins and pooled monitoring.
 
+**Looking ahead to 2029 (forecast).** Freely downloadable AI models are likely to match the hacking ability of today's best closed models during 2027, most likely around March on cyber measures; there is about an 80% chance by end-2027. By 2028 they will probably exceed anything current tests can measure. There is about a 40% chance that by end-2029 a downloadable model can run cyber operations fully on its own and develop new attacks. The cost of an automated attack attempt falls from about US$25 today to a few dollars in 2027 and to almost nothing by 2029.
+
+At today's pace of local defence, Trinidad and Tobago's credit unions, small insurers and brokers, e-money firms and weaker public bodies go from easy to very easy targets by 2028-29. The large locally owned banks drift from moderately hard towards easy. The foreign-owned banks and the payment switch stay hard to break into technically, but not hard to defraud through staff, customers and vendors. The forecast puts the chance of a publicly reported material incident at a smaller institution during 2027 at about 80%. For a confirmed compromise of any commercial bank's core or payment systems by end-2029, the chance is about 14%. The non-legislative actions in this report make most tiers about one step harder.
+
 On this report's scorecard, which mainly measures the framework around institutions rather than tested defences, overall readiness is **about 2 out of 5**.
 
 | Question | Finding |
@@ -78,9 +82,10 @@ On this report's scorecard, which mainly measures the framework around instituti
 | Are the largest banks prepared? | Partly, against common attacks. The Canadian-owned banks publish the strongest login controls. SMS codes remain selectable at the largest bank, and none of the banks reviewed publicly describes confirmation-of-payee checks. Public evidence cannot show how well internal defences work. |
 | Is the wider system prepared? | No. The main gaps are law, the speed of supervision and national warnings, information sharing, incident and loss data, shared infrastructure, and the credit-union and securities periphery. |
 | Will future AI swarms overwhelm Trinidad and Tobago? | On current trends, yes for many smaller institutions at the periphery within about a year; not, on current evidence, the large banks or the system as a whole. The measured gap is speed and coverage, not only headcount. |
+| How strong will free AI models get, and how easy will Trinidad and Tobago be to hack by 2029? | On the central forecast, free models match today's best closed models during 2027, and there is about a 40% chance of a fully autonomous attack model by end-2029. Smaller institutions become very easy targets by 2028-29. Large banks stay hard to break into technically but remain open to fraud. See Section 10. |
 | What would most improve readiness quickly? | A Central Bank frontier-AI supervisory letter, enforced email authentication at licensed institutions, faster national warnings, a sector payment-verification standard, a rapid fraud-freeze protocol and published incident data. Each can be done within months without new legislation. |
 
-*Scope and evidence:* research completed 28 October 2026 and extended on 29 and 30 October 2026, using public sources only: regulator and government documents, parliamentary records, company reports, AI-developer and security-vendor threat reports, and news coverage. On 29 October 2026 the research also read public DNS records for 33 institutions and made one request each to their public home page and to the standard security.txt location. No system was scanned or tested, and no confidential supervisory information was available. Ratings are analytical judgments. A public-evidence review can understate controls that institutions do not disclose and overstate controls that exist only on paper. Sources and methods appear at the end.
+*Scope and evidence:* research completed 28 October 2026 and extended on 29 and 30 October 2026, using public sources only: regulator and government documents, parliamentary records, company reports, AI-developer and security-vendor threat reports, and news coverage. On 29 October 2026 the research also read public DNS records for 33 institutions and made one request each to their public home page and to the standard security.txt location. No system was scanned or tested, and no confidential supervisory information was available. Ratings and the 2027-2029 forecast are analytical judgments. A public-evidence review can understate controls that institutions do not disclose and overstate controls that exist only on paper. Sources and methods appear at the end.
 
 <!-- PAGEBREAK -->
 
@@ -684,7 +689,123 @@ More staff alone will not close the gap, because no small country can hire its w
 - automatic holds on suspicious payments;
 - round-the-clock monitoring shared by the small institutions that cannot afford their own.
 
-## 10. Readiness scorecard
+## 10. Looking ahead to 2029: how strong free AI models will get, and how easy Trinidad and Tobago becomes to hack
+
+*This section is a forecast, made on 30 October 2026. Figures for today are measured. Figures for 2027 extend measured trends. Everything for 2028-29 is judgement beyond what any current test can measure.*
+
+### How the forecast was built
+
+The forecast tracks one thing above all: when freely downloadable (open-weight) models reach the hacking ability of the best closed models. Evaluators measure that gap at about four to seven months between release dates. [34, 36, 124]
+
+- **Lag:** the forecast assumes about 5 months in 2027, widening to about 6 months in 2028 and 8 months in 2029. The widening reflects China's shrinking share of the world's AI computing power, and is an assumption: the measured gap narrowed in 2025-26. [198]
+- **Pace:** the forecast uses the UK AI Security Institute's measured pace, in which the length of cyber task models can complete doubled every 4.7 months. [122, 192]
+- **Cost:** it uses Epoch AI's measured falls in the price of AI at a fixed level of capability, of about 5-13 times a year. [197]
+- **Views:** three framings were built from one evidence base: trend extrapolation, a sceptic focused on what could slow progress, and an attacker's view of costs and targets. They were combined into one forecast, which was then checked by a methodology critic and a source checker.
+
+Trinidad and Tobago's institutions are then rated on how easy they would be to breach, using the evidence in Sections 5 to 9.
+
+### How strong free models are likely to become
+
+| Year | Best free model likely to match | What it can probably do | Model cost per attack attempt | Skill the attacker needs | Confidence |
+|---|---|---|---|---|---|
+| Today (Oct 2026) | GLM-5.3 and Kimi K3: roughly the closed frontier of spring 2026 [124, 193] | Attack "small, weakly defended and vulnerable enterprise systems" once given initial access [35]. Build working exploits about as often as the restricted Mythos Preview did: 50 against 56 of 410 attempts [40]. Turn published browser fixes into working attacks for about US$1,000 each at the margin, though not full takeovers of the computer [195] | About US$25 per target scanned [13]; US$50-100 for a full attack chain on cheap models [43] | Moderate for intrusions; low for AI-written fraud | Measured; untested against active defenders |
+| 2027 | The best closed models of September 2026: GPT-6 Astra and Claude Opus 5.5. Central estimate about March 2027 on cyber measures (range January-June); third quarter on Epoch's broader index; about 80% likely by end-2027 | Work through a small, undefended corporate network from start to finish once inside. Turn most newly published fixes for common internet-facing products into working attacks within hours to a day. Run hundreds of targets at once with a human checking in occasionally. Write flawless local phishing and run live voice and video impersonation | A few US dollars per automated attempt; about US$4-50 for a full attack at 2026 capability | Low for automated sweeps and fraud; an organised crew to get through a monitored network | Medium |
+| 2028 | Roughly the closed frontier of mid-2028, beyond anything tested today | Run most steps of an intrusion into an ordinary corporate network, with humans at a few decision points across hundreds of targets. Find and exploit new flaws in less-checked regional and custom vendor software routinely. About a 20% chance that a free model can run cyber operations fully on its own and develop new attacks ("Tier 2" in Anthropic's definition) [194] | Cents to about US$10 per attempt | Low to moderate for opportunistic and mid-level targeted attacks; skilled groups still needed for hardened bank systems | Low to medium |
+| 2029 | Roughly the closed frontier of early-to-mid 2029 | Teams of AI agents plan and carry out complete intrusions against ordinary networks from a one-line goal, and adapt to some defences. About a 40% chance of a fully autonomous "Tier 2" free model | Effectively free, under about US$3 per attempt | Very low for opportunistic attacks; a small, modestly skilled crew for ordinary monitored networks | Low |
+
+*Costs are marginal AI fees only and exclude infrastructure, research and laundering costs. Building new exploits against hardened software stays far more expensive: Epoch put total spending on its browser-exploit research above US$100,000. [195] Anthropic rates its own newest models below "Tier 2"; its most capable restricted model is "getting closer". [194]*
+
+Three caveats matter:
+
+- No government test has yet pitted AI agents against active human defenders. One 2026 study found that defending AI agents cut attackers' success to between 0% and 55%. [202]
+- Real-world harm has not yet tracked test scores. In US surveys, the share of adults facing a cyber incident stayed flat from June to September 2026. [203] Only 1.3% of flaws found with AI help had been exploited by mid-2026. [132]
+- Hour-based extrapolations stop at 2027, because current tests top out at about 12 to 20 hours of expert work. [33, 122]
+- Humans still steer real attacks. Microsoft found that in most campaigns it observed, "target selection, operational decision-making, and execution of the most complex intrusions remain manually driven". [201]
+- Forecasters disagree widely. The AI Futures Project's medians for an AI system that can automate coding range from late 2027 to 2030. [204]
+
+### Four ways it could go
+
+| Path | Chance | What happens | What it means for Trinidad and Tobago |
+|---|---|---|---|
+| A. Steady follower | About 50% | Free models trail the closed frontier by 5-8 months. Progress slows a little in 2028-29 as computing and data limits bite. Chinese labs keep releasing models | The ratings below apply. The smaller institutions become very easy targets by 2028-29; large banks mostly hold against technical intrusion but lose money through impersonation, account takeover and vendors |
+| B. Faster | About 20% | Jumps like Mythos Preview's recur, copying keeps the lag at 3-4 months, and Chinese labs keep pushing open cyber capability [196] | Every tier is about one step easier from 2028. The large local banks become easy overall by 2029, and the payment switch becomes moderately hard to breach in 2028 |
+| C. Slower | About 25% | China restricts the release of its most capable models under a draft technology-export list, or its labs keep their best models private, and chip limits bite. The lag widens to 9-18 months [198, 199] | The smaller institutions do not get safer, because models already released are good enough against weak defences and cannot be recalled. Large banks and the payment switch stay hard to breach through 2029 |
+| D. Break in the trend | About 5% | Frontier model files are stolen or leaked, or AI starts to automate AI research [203] | Harm arrives mainly through global vendors, cloud, telecoms and card networks. Capital and cash limit solvency damage, but outages could last days |
+
+*A separate branch, in which global defences keep pace through AI patching and monitoring built into common software, has about a 15% chance. It would mainly help institutions running modern cloud and packaged software, not credit unions and agencies running older systems of their own.*
+
+### How easy Trinidad and Tobago's institutions become to hack
+
+The scale measures how easy a successful breach causing material harm would be, and for whom, at today's pace of local defence:
+
+- **Very easy:** a low-skill operator with a rented AI kit.
+- **Easy:** an opportunistic criminal with off-the-shelf tools.
+- **Moderate:** an organised crew with specialist skill, weeks of effort or a human inside step, such as an insider, a money mule or a SIM swap.
+- **Hard:** a top-tier criminal or state-backed group able to build new exploits and evade round-the-clock monitoring.
+
+| Institutions | Today | 2027 | 2028 | 2029 | 2029 if this report's actions are taken |
+|---|---|---|---|---|---|
+| Large foreign-owned banks (core systems / fraud through staff, customers and vendors) | Hard / Moderate | Hard / Moderate | Hard / Moderate | Hard / Moderate | Hard / Moderate to Hard |
+| Large locally owned banks (overall; customer accounts) | Moderate; accounts Easy | Moderate; accounts Easy | Moderate; accounts Easy | Moderate to Easy; core systems Hard to Moderate; accounts Easy to Very easy | Moderate; core systems Hard; accounts Moderate |
+| Large insurers, pension and investment groups / small insurers and brokers | Moderate / Easy | Moderate / Easy | Moderate / Easy to Very easy | Moderate / Very easy | Moderate to Hard / Moderate with pooled monitoring |
+| Credit unions | Easy | Easy (Very easy for the smallest) | Easy to Very easy | Very easy (Easy for the largest) | Easy; Moderate for those in pooled 24/7 monitoring |
+| E-money, fintech and virtual-asset firms | Easy | Easy | Easy | Easy to Very easy | Moderate |
+| Payment switch (Infolink) / key vendors | Hard / Moderate | Hard / Moderate | Hard, but Moderate for any untested new instant-payment interface / Moderate | Hard to Moderate / Easy to Moderate | Hard / Moderate |
+| Telecom operators (network / SIM swaps) | Moderate / Easy to Very easy | Moderate / Easy to Very easy | Moderate / Easy to Very easy | Moderate to Easy / Easy to Very easy | Moderate / Moderate to Hard with SIM-swap controls |
+| Government and finance-related public bodies | Weaker bodies Easy; the Central Bank Moderate to Hard | Weaker bodies Easy | Many agencies Easy | Smaller agencies Easy to Very easy; the Central Bank Moderate | Most Moderate |
+
+*Central path at today's pace of local defence. "Actions" means the non-legislative measures in Section 13 are in force by end-2027, with no new law in force before 2029. Ease is not likelihood: few capable groups would choose to attack a large Trinidad and Tobago bank's core systems, so the chance of that remains low (below).*
+
+The ratings rest on documented evidence:
+
+- **Smaller institutions:** for credit unions, small insurers, brokers, e-money firms and weaker agencies, the main change is volume and cost, because models released in 2026 are already likely good enough against systems like theirs. [35]
+- **Large locally owned banks:** their ratings drift because they have no foreign parent, SMS codes remain selectable at the largest, and there is no patching deadline or threat-led testing rule. [64, 83]
+- **The payment switch:** it stays hard to breach unless a new interface is launched without testing.
+- **CIBC Caribbean:** the change of ownership is a local window of exposure. Closing is expected in the first half of 2027, and CIBC's transition services can run for up to 24 months after that. [86, 162]
+
+### The odds, 2027-2029
+
+| Event | Chance at today's pace | Chance with this report's actions |
+|---|---:|---:|
+| A publicly reported material incident at a credit union, insurer, broker, e-money firm or public body during 2027 | About 80% | About 77% |
+| Three or more such incidents in a single year during 2027-29 | About 70% | About 55% |
+| A customer account takeover costing one customer over TT$1 million, publicly reported | About 90% | About 80% |
+| A material incident borne by a commercial bank itself, by any route including impersonation fraud | About 60% | About 50% |
+| Impersonation or deepfake payment fraud of TT$10 million or more borne by an institution | About 50% | About 30-40% |
+| One vendor breach hitting three or more local institutions at once | About 40% | About 35% |
+| Public attribution of AI-agent use in an intrusion at a local financial institution | About 40% | About 40% |
+| A confirmed compromise of any commercial bank's core banking or payment systems, by any route | About 14% (5-25%) | About 9% |
+| A cyber outage of a day or more at the ACH or LINX | About 5% | About 3% |
+| A large bank's core systems broken into mainly by an AI agent, and publicly attributed as such | About 3% | About 2% |
+
+*Judgements weighted across the four paths. "Material" means an outage of at least a day, a reportable customer-data leak or a loss over TT$1 million. Only publicly reported incidents count; more will happen unreported while there is no duty to notify breaches. The starting point is about one publicly reported material incident a year at the periphery since 2019, and one large impersonation loss at a bank (CIBC, 2025). [51, 53, 56, 63]*
+
+### What does not change in any scenario
+
+- **Released models cannot be recalled.** GLM-5.3, Kimi K3, DeepSeek V4.1 Flash, Mistral Large 4 and Meta's open model are already downloadable, and Kimi K3.1 Pro's weights are due on 4 November 2026. [196] China's draft export list exempts technology already open-sourced. [199] The IMF expects temporary buffers, such as the limited availability of advanced cyber AI, to erode quickly. [205]
+- **Being small no longer protects Trinidad and Tobago.** Scanning and exploiting known flaws costs cents to tens of dollars per attempt in AI fees, so global sweeps reach every country.
+- **Attackers take the easiest route:** people, stolen logins, SIM swaps, vendors and unpatched systems.
+- **Turning access into money stays human work.** Money mules, laundering and foreign-exchange limits constrain criminals, and bank capital and the cash fallback limit harm to the system.
+- **Fixes that need new laws arrive too late on current plans.** The Central Bank's strategic plan schedules projects "dependent on external legislative or other support" for its fourth and fifth years, about 2029/30-2030/31 [68]. That is after the period in which the smaller institutions become very easy targets.
+- **The deciding variable is local speed,** not AI progress: how fast Trinidad and Tobago patches, warns, verifies payments and freezes fraud.
+
+### Deadlines
+
+| By when | Action | Why then |
+|---|---|---|
+| End-November 2026 | Central Bank and TTSEC frontier-AI supervisory letter, with patching in days and same-day "patch or disconnect" instructions in mass-exploitation waves; TT-CSIRT 24-hour warnings on every exploited flaw in common internet-facing products | Free models already build working exploits about as often as April 2026's restricted frontier model; New Zealand's cyber agency expects attackers may have today's frontier capabilities "by early 2027" [40, 200] |
+| 31 January 2027 | Enforced DMARC email protection at every licensee, telecom operator and credit union | It costs almost nothing, and AI makes impersonation email cheap and fluent |
+| 31 March 2027 | Payment call-back standard, 24/7 fraud-freeze protocol, 24-hour vendor breach notice and pre-agreed shutdown criteria | Free models reach the September 2026 frontier around March 2027 on the central path |
+| Before the CIBC Caribbean sale closes (expected first half of 2027) | A migration security plan, named post-transition security providers and a threat-led test before any systems cutover | Ownership changes and systems migrations are classic attack windows [86, 162] |
+| Mid-2027 | Pooled 24/7 monitoring and automated patching for credit unions, small insurers, brokers and e-money firms; direct exposure alerts from TT-CSIRT | Credit unions move from easy to very easy during 2028, and supervision depends on legislation that is not planned before 2029/30 [68] |
+| Before any instant-payment launch, and during 2027 | Confirmation of payee and fraud holds at launch; threat-led testing of Infolink | Instant payments make fraud faster and irreversible |
+| End-2027 | Phishing-resistant logins for privileged staff; SMS codes phased out for high-risk customer actions; patch deadlines in the Central Bank's guideline; SIM-swap controls and a recent-SIM-change check for banks | On the central path, AI agents run most steps of an intrusion by 2028. The UK cyber agency expects AI to be used at scale against legacy technology by 2028 [200] |
+| Bills tabled in 2027, enacted by mid-2028 | Credit-union supervision, a modern cybercrime law, data protection with breach notification, and a statutory, funded TT-CSIRT | Only an accelerated timetable brings these inside the 2027-29 window |
+
+**Assessment (forecast):** by 2029, breaking into Trinidad and Tobago's smaller financial institutions is likely to need little more than a rented AI kit and intent. The large banks are likely to remain hard to break into technically, but not hard to defraud. The decisive factor is not how clever the AI gets. It is whether Trinidad and Tobago applies the basics at machine speed before 2028. Most of the required steps need no new law.
+
+
+## 11. Readiness scorecard
 
 Each domain is rated from 1 to 5 against the international practice described in this report: [43-45, 87-91]
 
@@ -733,7 +854,7 @@ The result is not sensitive to individual judgments: moving any five domains by 
 
 Trinidad and Tobago's bank reporting clock is comparable with its neighbours'. Barbados has moved further on testing and AI-specific rules, and Jamaica on testing and information sharing.
 
-## 11. How an AI-armed group would most likely attack, and what would happen
+## 12. How an AI-armed group would most likely attack, and what would happen
 
 The question is not whether a group could break into Trinidad and Tobago's best-defended bank core. It is which route a rational attacker would choose, and how the system would respond. The table describes likely routes at a strategic level only.
 
@@ -755,7 +876,7 @@ The question is not whether a group could break into Trinidad and Tobago's best-
 
 The tail risk is an outage at shared infrastructure. A multi-day failure of the ACH or the LINX network would interrupt salaries, bill payments and card transactions across all participating banks. The cash fallback would limit, but not eliminate, the harm. Abroad, ransomware took a US$9 billion California credit union's online banking offline for more than two weeks, and customers reported ATM withdrawals limited to US$500. [97] A similar event at a large local credit union or insurer is plausible.
 
-## 12. What would make Trinidad and Tobago ready
+## 13. What would make Trinidad and Tobago ready
 
 Most of the required measures are rules and coordination, not expensive technology. The binding constraints are political priority, legislative time and specialist staff.
 
@@ -785,7 +906,7 @@ Most of the required measures are rules and coordination, not expensive technolo
 - **Defensive AI:** seek access to AI developers' defensive programmes jointly, through CARICOM bodies or Caribbean central banks, because developers favour partners whose systems serve far more people than any one small country has. Use AI for fraud detection and patch prioritisation.
 - **Exercises:** run a sector-wide exercise that combines ransomware at a shared provider with deepfake payment fraud, and publish the lessons.
 
-## 13. What to monitor, and the final judgment
+## 14. What to monitor, and the final judgment
 
 | Indicator | Why it changes the assessment |
 |---|---|
@@ -803,6 +924,10 @@ Most of the required measures are rules and coordination, not expensive technolo
 | Renewal of Infolink's card-security certificate (valid to 6 November 2026) [149] | A routine check on the payment switch's controls |
 | New open-weight model releases and AISI, CAISI or Epoch evaluations | Shows when freely downloadable models reach today's restricted frontier |
 | Any reported PHP2Shell compromise in Trinidad and Tobago, and any Central Bank communication on it | The first local test of a machine-speed exploitation wave |
+| First independent tests of Kimi K3.1 Pro and DeepSeek V4.1 Flash, and new estimates of the gap between free and closed models | A gap under 4 months, or a free model completing AISI's 32-step range in 5 or more of 10 tries, points to the faster forecast path; a gap over 9 months to the slower one |
+| China's final technology-export list, and whether the next Chinese flagship models are released openly | Two withheld flagships in a row would raise the slower path; the smaller institutions gain no time either way |
+| Test ranges with active defenders, and AI developers declaring a "Tier 2" or "Critical" cyber model | Attacker success above about 50% against active defenders makes large banks about one step easier; add 4-9 months to any closed-model threshold to estimate when free models reach it |
+| The number of publicly reported material incidents at smaller Trinidad and Tobago institutions each year (about one a year since 2019) | More than about two in 2027 confirms the central or faster forecast path |
 | Binance's root-cause report, and any official attribution | Shows how a well-resourced financial platform was entered, and what banks should check in their own payment-approval systems |
 | Incident-response capacity: published backlogs or response times from response firms and insurers | Shows whether the reported strain on responders is real and lasting |
 
@@ -826,7 +951,7 @@ AI multiplies exactly these weaknesses. It makes impersonation more convincing, 
 
 The evidence does **not** show that a successful AI-driven attack on a local bank has occurred, that open-weight models outperform US models, or that a systemic cyber crisis is imminent. Losses to date have been material but not systemic, and strong capital and a cash fallback limit the damage to the financial system itself. Nor can public evidence show how well individual banks would hold up. Determined groups have breached financial institutions in far larger and better-resourced systems, so readiness is a matter of degree everywhere.
 
-**The appropriate conclusion is a large and widening readiness gap in the framework around the financial system.** The cheapest fixes are regulatory and organisational, and could begin within weeks. Every month without them leaves attackers' falling costs to meet defences that are changing only slowly. With capability doubling every four to five months and freely downloadable models less than a year behind, the window to act before swarm-scale attacks reach the periphery is short. The October 2026 PHP2Shell wave was a live test. TT-CSIRT warned on the day, but the Central Bank said nothing publicly, while New York's financial regulator told its firms within a day to patch or disconnect.
+**The appropriate conclusion is a large and widening readiness gap in the framework around the financial system.** The cheapest fixes are regulatory and organisational, and could begin within weeks. Every month without them leaves attackers' falling costs to meet defences that are changing only slowly. With capability doubling every four to five months and freely downloadable models less than a year behind, the window to act before swarm-scale attacks reach the periphery is short. On this report's forecast, the smaller institutions become very easy targets by 2028-29 unless the basics are applied at machine speed before then. The October 2026 PHP2Shell wave was a live test. TT-CSIRT warned on the day, but the Central Bank said nothing publicly, while New York's financial regulator told its firms within a day to patch or disconnect.
 
 <!-- PAGEBREAK -->
 
@@ -848,6 +973,8 @@ Figures reported in different currencies or without a stated currency are given 
 TT-CSIRT's incident counts were read on 28 October 2026 from the data embedded in its statistics page, which draws the figures with scripts. A plain download of the page shows only empty placeholders.
 
 **Passive internet checks (Section 8).** On 29 October 2026 the research looked up public DNS records for 49 domains: 37 belonging to 33 Trinidad and Tobago institutions and public bodies, five belonging to foreign parent groups and seven belonging to foreign comparators. It read each domain's mail servers and its SPF, DMARC and DNSSEC settings through a public DNS resolver. It then made one ordinary web request to each home page, to read whether the site sends an HSTS header, and one to the standard location of a security.txt file. This is the information every email server and web browser receives. Nothing was scanned, probed or logged into. Where an institution uses several domains, the one that receives its email was counted. Results for individual institutions are held privately for notification to them.
+
+**2027-2029 forecast (Section 10).** Three analytical framings (trend extrapolation, a bottleneck sceptic and attacker economics) were built from one evidence review, so they are not independent forecasts. They were combined into one projection, which a methodology critic and a source checker then reviewed and which was revised. Open-weight timing uses release-to-release lags; scenario weights (50/20/25/5) are judgements; event odds start from Trinidad and Tobago's public base rates and apply stated multipliers for each path. Figures for 2028-29 go beyond what any current test measures and should be read as reasoned judgement.
 
 **National warning coverage (Section 9).** CISA's catalogue of known exploited vulnerabilities (version of 28 October 2026) was compared with every vulnerability identifier named in TT-CSIRT's published posts from 13 March 2026, when it resumed publishing, to 28 October 2026. "Eight leading firewall, VPN and gateway vendors" means Citrix, Fortinet, Ivanti, SonicWall, Palo Alto Networks, Check Point, F5 and Zyxel; some of their listed products are not edge devices. Including Cisco, coverage was 5 of 48. Timing comparisons use publication dates and may differ by a day because of time zones.
 
@@ -1274,5 +1401,35 @@ Domains were chosen to cover the controls that international authorities emphasi
 **[190]** Trinidad Express (6 January 2026), *Crypto firms must seek approval or halt operations*, on the Virtual Assets and Virtual Asset Service Providers Act, 2025. [Article](https://trinidadexpress.com/business/local/crypto-firms-must-seek-approval-or-halt-operations/article_7933b713-be42-4b60-a137-94182578d4bc.html).
 
 **[191]** Reuters via Investing.com (29 October 2026), *Chinese AI model carries out complex cyberattacks in controlled tests, researchers say*. [Article](https://www.investing.com/news/stock-market-news/chinese-ai-model-carries-out-complex-cyberattacks-in-controlled-tests-researchers-say-4981414).
+
+## References: the 2027-2029 forecast (Section 10)
+
+**[192]** UK AI Security Institute (2 July 2026), *More compute, more capability: why AI agent evaluations need to account for test-time compute*. [Blog](https://www.aisi.gov.uk/blog/more-compute-more-capability-why-ai-agent-evals-need-to-account-for-test-time-compute).
+
+**[193]** Epoch AI (1 September 2026), *ECI frontier trend*, and Epoch Capabilities Index model scores (read 30 October 2026). [Trend](https://epoch.ai/data-insights/eci-frontier-trend) · [Scores](https://epoch.ai/data/eci_scores.csv).
+
+**[194]** Anthropic (1 September 2026), *System card: Claude Fable 5.1 and Claude Mythos 5.1*; Anthropic (22 September 2026), *System card: Claude Opus 5.5*. Definitions of cyber capability tiers. [Fable 5.1 and Mythos 5.1](https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card) · [Opus 5.5](https://www.anthropic.com/claude-opus-5-5-system-card).
+
+**[195]** Epoch AI (29 October 2026), *AI can turn security fixes into working exploits before users receive an update*. [Publication](https://epoch.ai/publications/open-weight-models-patch-gap).
+
+**[196]** Moonshot AI (October 2026), *Kimi K3.1 Pro*, with self-reported, unverified benchmark scores; Mistral AI (29 October 2026), *Mistral Large 4* open weights; DeepLearning.AI The Batch (23 October 2026), on Meta's open model. [Moonshot](https://www.kimi.ai/blog/kimi-k3-1-pro) · [Mistral](https://mistral.ai/news/mistral-large-4-oss) · [The Batch](https://www.deeplearning.ai/the-batch/meta-releases-wonder-opens-spark/).
+
+**[197]** Epoch AI (22 September 2026), *The plunging price of thought*; Epoch AI, *Frontier performance on consumer hardware within a year*. [Prices](https://epoch.ai/publications/the-plunging-price-of-thought) · [Consumer hardware](https://epoch.ai/data-insights/consumer-gpu-model-gap).
+
+**[198]** Epoch AI (27 October 2026), *AI chip imports explorer*; Epoch AI (September 2026), *Will Huawei catch up to Nvidia by 2030?* [Chip imports](https://epoch.ai/latest/introducing-the-ai-chip-imports-explorer) · [Huawei](https://epoch.ai/publications/huaweis-roadmap-to-2031).
+
+**[199]** AI Safety in China, Brief 31, on China's draft technology-export catalogue (October 2026); AEI (1 October 2026), *The looming closure of China's AI frontier*. [Brief](https://aisafetychina.substack.com/p/brief-31-what-chinas-new-ai-export) · [AEI](https://www.aei.org/foreign-and-defense-policy/the-looming-closure-of-chinas-ai-frontier/).
+
+**[200]** NCSC New Zealand (24 September 2026), *Cyber threat report 2026*; UK NCSC (17 June 2026), chief executive's speech on hostile states and AI. [NCSC NZ](https://www.ncsc.govt.nz/news/cyber-threat-report-2026-leaders-need-to-prepare-now-for-the-impact-of-ai/) · [UK NCSC](https://www.ncsc.gov.uk/news/ncsc-ceo-hostile-states-linked-to-three-quarters-of-cyber-attacks).
+
+**[201]** Microsoft *Digital Defense Report 2026*, as reported by Help Net Security (2 October 2026). [Article](https://www.helpnetsecurity.com/2026/10/02/ai-cybersecurity-threats-microsoft-report/).
+
+**[202]** arXiv 2604.24184 (April 2026), study of AI defender agents against AI attackers. Single study. [Paper](https://arxiv.org/abs/2604.24184).
+
+**[203]** Epoch AI (7 October 2026), *US adults no more likely to face cyber incidents since Fable 5*; Epoch AI (7 October 2026), *Can AI automate AI R&D yet?* [Incidents](https://epoch.ai/data-insights/cyber-incidents-flat-since-fable-5) · [InnovationEval](https://epoch.ai/publications/innovationeval).
+
+**[204]** Forecasting Research Institute (23 July 2026), *Forecasting AI cyber risks and capabilities*; AI Futures Project (16 August 2026), *Q2.5 2026 timelines update*. Expert and forecaster opinion. [FRI](https://forecastingresearch.org/research/ai-cyber-risk) · [AI Futures](https://blog.aifutures.org/p/q25-2026-timelines-update-uplift).
+
+**[205]** IMF blogs (7 May 2026), *Financial stability risks mount as artificial intelligence fuels cyberattacks*, and (12 October 2026), on rising risks from AI and cyberattacks. [May](https://www.imf.org/en/blogs/articles/2026/05/07/financial-stability-risks-mount-as-artificial-intelligence-fuels-cyberattacks) · [October](https://www.imf.org/en/blogs/articles/2026/10/12/global-financial-markets-face-rising-risks-from-ai-bond-yields-and-cyberattacks).
 
 *Currency amounts are as published. Conclusions, ratings and scenarios are the report's analysis. They are not statements by the Central Bank of Trinidad and Tobago, TT-CSIRT, any bank or any other institution.*
